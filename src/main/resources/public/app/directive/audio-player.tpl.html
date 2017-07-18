@@ -1,0 +1,40 @@
+<style>
+.stopicon{
+	padding: 0px;
+	color:white;
+	font:bold;
+}
+.playicon{
+	padding: 0px;
+	color: white;
+	font:bold;
+}
+/*ng-style="{color: !font.theme && font.color, 'font-size': it.size + 'px', height: it.size + 'px'}"*/
+</style>
+
+	<md-icon
+		style="color:{{vm.color}};" 
+    	ng-class="stopicon"
+    	ng-click="vm.togglePlay();"
+    	aria-label="stop"
+    	ng-if="vm.isPlaying"> 
+    	stop
+    	<md-tooltip md-direction="right">
+        	stop
+    	</md-tooltip>
+    </md-icon>
+    
+    <md-icon
+    	style="color:{{vm.color}};" 
+    	ng-class="playicon"
+    	ng-click="vm.togglePlay();"
+    	aria-label="play" 
+    	ng-if="!vm.isPlaying"> 
+    	play_arrow
+    	<md-tooltip md-direction="right">
+        	play
+    	</md-tooltip>
+   	</md-icon>
+    
+    
+    

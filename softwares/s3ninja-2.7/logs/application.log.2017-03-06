@@ -1,0 +1,32 @@
+2017-03-06 00:17:17,139 INFO  [Thread-4] sirius - Stopping Sirius
+2017-03-06 00:17:17,153 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-06 00:17:17,153 INFO  [Thread-4] sirius - Stopping lifecycles...
+2017-03-06 00:17:17,154 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-06 00:17:17,167 INFO  [default-3] sirius - Stopping: timer (System Timer Services)
+2017-03-06 00:17:17,173 INFO  [default-11] sirius - Stopping: Cluster
+2017-03-06 00:17:17,174 INFO  [default-19] sirius - Stopping: web (netty HTTP Server)
+2017-03-06 00:17:17,369 INFO  [default-0] sirius - Stopping: Rythm-Engine
+2017-03-06 00:17:17,487 INFO  [default-8] sirius - Stopping: crunchlog-writeback
+2017-03-06 00:17:17,488 INFO  [default-12] sirius - Stopping: tasks (Async Execution Engine)
+2017-03-06 00:17:17,493 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-06 00:17:17,493 INFO  [Thread-4] sirius - Awaiting system halt...
+2017-03-06 00:17:17,493 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-06 00:17:17,494 INFO  [Thread-4] sirius - Terminated: timer (System Timer Services) (Took: 63 us)
+2017-03-06 00:17:17,494 INFO  [Thread-4] sirius - Terminated: Cluster (Took: 8 us)
+2017-03-06 00:17:19,557 INFO  [Thread-4] sirius - Terminated: web (netty HTTP Server) (Took: 2 Seconds, 61 Milliseconds)
+2017-03-06 00:17:19,557 INFO  [Thread-4] sirius - Terminated: Rythm-Engine (Took: 15 us)
+2017-03-06 00:17:19,557 INFO  [Thread-4] sirius - Terminated: crunchlog-writeback (Took: 15 us)
+2017-03-06 00:17:19,597 INFO  [Thread-4] sirius - Terminated: tasks (Async Execution Engine) (Took: 39 Milliseconds)
+2017-03-06 00:17:19,598 INFO  [Thread-4] sirius - System halted! - Thread State
+2017-03-06 00:17:19,598 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-06 00:17:19,599 INFO  [Thread-4] sirius - STATE                   ID                                                  NAME
+2017-03-06 00:17:19,654 INFO  [Thread-4] sirius - BLOCKED                 82                                        SIGINT handler
+2017-03-06 00:17:19,654 INFO  [Thread-4] sirius - RUNNABLE                25                                              Thread-4
+2017-03-06 00:17:19,655 INFO  [Thread-4] sirius - WAITING                 79                                        SIGINT handler
+2017-03-06 00:17:19,655 INFO  [Thread-4] sirius - TIMED_WAITING           57                                threadDeathWatcher-2-1
+2017-03-06 00:17:19,656 INFO  [Thread-4] sirius - RUNNABLE                 5                                       Attach Listener
+2017-03-06 00:17:19,656 INFO  [Thread-4] sirius - RUNNABLE                 4                                     Signal Dispatcher
+2017-03-06 00:17:19,657 INFO  [Thread-4] sirius - WAITING                  3                                             Finalizer
+2017-03-06 00:17:19,657 INFO  [Thread-4] sirius - WAITING                  2                                     Reference Handler
+2017-03-06 00:17:19,657 INFO  [Thread-4] sirius - RUNNABLE                 1                                                  main
+2017-03-06 00:17:19,658 INFO  [Thread-4] sirius - ---------------------------------------------------------

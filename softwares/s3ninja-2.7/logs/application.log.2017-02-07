@@ -1,0 +1,266 @@
+2017-01-27 13:37:18,011 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-01-27 13:37:18,059 INFO  [main] sirius - Windows 7 (6.1) on 4 CPUs (amd64)
+2017-01-27 13:37:18,059 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-27 13:37:18,059 INFO  [main] sirius - System is STARTING...
+2017-01-27 13:37:18,059 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-27 13:37:18,059 INFO  [main] sirius - Loading config...
+2017-01-27 13:37:18,059 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-27 13:37:18,139 INFO  [main] sirius - using application.conf from classpath...
+2017-01-27 13:37:18,297 INFO  [main] sirius - using instance.conf from filesystem...
+2017-01-27 13:37:18,325 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-27 13:37:18,325 INFO  [main] sirius - Starting the system...
+2017-01-27 13:37:18,325 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-27 13:37:18,661 INFO  [main] sirius - Initializing the log system:
+2017-01-27 13:37:18,687 INFO  [main] sirius - * Setting velocity to: WARN
+2017-01-27 13:37:18,687 INFO  [main] sirius - * Setting ignored to: OFF
+2017-01-27 13:37:18,695 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-01-27 13:37:18,695 INFO  [main] sirius - Active Customizations: []
+2017-01-27 13:37:19,034 INFO  [main] di - Initializing the MicroKernel....
+2017-01-27 13:37:19,034 INFO  [main] di - ~ Scanning .class files...
+2017-01-27 13:37:20,428 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-01-27 13:37:20,854 INFO  [main] di - ~ Initializing static parts-references...
+2017-01-27 13:37:21,161 INFO  [main] di - ~ Initializing parts...
+2017-01-27 13:37:21,275 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-01-27 13:37:21,292 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-01-27 13:37:21,294 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-01-27 13:37:22,443 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-01-27 13:37:22,444 INFO  [default-3] web - Initializing netty at port 9444
+2017-01-27 13:37:23,285 INFO  [default-4] sirius - Starting: Cluster
+2017-01-27 13:37:23,288 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-01-27 13:37:23,290 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-27 13:37:23,290 INFO  [main] sirius - System is UP and RUNNING - 5 Seconds, 717 Milliseconds
+2017-01-27 13:37:23,290 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-27 13:37:35,313 INFO  [default-6] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-01-28 11:32:21,227 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-01-28 11:32:21,258 INFO  [main] sirius - Windows 10 (10.0) on 4 CPUs (amd64)
+2017-01-28 11:32:21,258 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-28 11:32:21,258 INFO  [main] sirius - System is STARTING...
+2017-01-28 11:32:21,258 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-28 11:32:21,258 INFO  [main] sirius - Loading config...
+2017-01-28 11:32:21,258 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-28 11:32:21,296 INFO  [main] sirius - using application.conf from classpath...
+2017-01-28 11:32:21,365 INFO  [main] sirius - using instance.conf from filesystem...
+2017-01-28 11:32:21,365 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-28 11:32:21,365 INFO  [main] sirius - Starting the system...
+2017-01-28 11:32:21,365 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-28 11:32:21,528 INFO  [main] sirius - Initializing the log system:
+2017-01-28 11:32:21,528 INFO  [main] sirius - * Setting velocity to: WARN
+2017-01-28 11:32:21,528 INFO  [main] sirius - * Setting ignored to: OFF
+2017-01-28 11:32:21,528 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-01-28 11:32:21,528 INFO  [main] sirius - Active Customizations: []
+2017-01-28 11:32:21,628 INFO  [main] di - Initializing the MicroKernel....
+2017-01-28 11:32:21,628 INFO  [main] di - ~ Scanning .class files...
+2017-01-28 11:32:22,566 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-01-28 11:32:22,845 INFO  [main] di - ~ Initializing static parts-references...
+2017-01-28 11:32:23,230 INFO  [main] di - ~ Initializing parts...
+2017-01-28 11:32:23,330 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-01-28 11:32:23,346 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-01-28 11:32:23,346 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-01-28 11:32:25,288 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-01-28 11:32:25,288 INFO  [default-3] web - Initializing netty at port 9444
+2017-01-28 11:32:26,174 INFO  [default-4] sirius - Starting: Cluster
+2017-01-28 11:32:26,189 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-01-28 11:32:26,189 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-28 11:32:26,189 INFO  [main] sirius - System is UP and RUNNING - 5 Seconds, 38 Milliseconds
+2017-01-28 11:32:26,189 INFO  [main] sirius - ---------------------------------------------------------
+2017-01-28 11:32:36,987 INFO  [default-7] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-01-28 17:32:51,631 INFO  [timer-1] crunchlog - Crunchlog writes to: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\crunchlog
+2017-01-28 17:32:51,679 WARN  [timer-1] crunchlog - Crunchlog was stopped as the base directory: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\crunchlog does not exist!
+2017-02-07 18:55:22,950 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-02-07 18:55:22,953 INFO  [main] sirius - Windows 7 (6.1) on 4 CPUs (amd64)
+2017-02-07 18:55:22,953 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 18:55:22,953 INFO  [main] sirius - System is STARTING...
+2017-02-07 18:55:22,953 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 18:55:22,953 INFO  [main] sirius - Loading config...
+2017-02-07 18:55:22,954 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 18:55:22,985 INFO  [main] sirius - using application.conf from classpath...
+2017-02-07 18:55:23,596 INFO  [main] sirius - using instance.conf from filesystem...
+2017-02-07 18:55:23,601 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 18:55:23,601 INFO  [main] sirius - Starting the system...
+2017-02-07 18:55:23,601 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 18:55:24,391 INFO  [main] sirius - Initializing the log system:
+2017-02-07 18:55:24,405 INFO  [main] sirius - * Setting velocity to: WARN
+2017-02-07 18:55:24,405 INFO  [main] sirius - * Setting ignored to: OFF
+2017-02-07 18:55:24,412 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-02-07 18:55:24,413 INFO  [main] sirius - Active Customizations: []
+2017-02-07 18:55:24,695 INFO  [main] di - Initializing the MicroKernel....
+2017-02-07 18:55:24,695 INFO  [main] di - ~ Scanning .class files...
+2017-02-07 18:55:25,656 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-02-07 18:55:26,479 INFO  [main] di - ~ Initializing static parts-references...
+2017-02-07 18:55:26,703 INFO  [main] di - ~ Initializing parts...
+2017-02-07 18:55:26,836 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-02-07 18:55:26,843 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-02-07 18:55:26,843 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-02-07 18:55:28,675 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-02-07 18:55:28,675 INFO  [default-3] web - Initializing netty at port 9444
+2017-02-07 18:55:33,181 INFO  [default-4] sirius - Starting: Cluster
+2017-02-07 18:55:33,184 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-02-07 18:55:33,186 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 18:55:33,187 INFO  [main] sirius - System is UP and RUNNING - 10 Seconds, 317 Milliseconds
+2017-02-07 18:55:33,187 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 18:55:45,392 INFO  [default-8] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-02-07 19:26:04,594 ERROR [web-mvc-0] storage - An error occurred: Basedir 'C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3' does not exist!
+sirius.kernel.health.HandledException: An error occurred: Basedir 'C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3' does not exist!
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at ninja.Storage.getBaseDir(Storage.java:47)
+	at ninja.Storage.getBucket(Storage.java:121)
+	at ninja.S3Controller.object(S3Controller.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-02-07 19:26:04,737 INFO  [web-mvc-0] resources - Base directory: 'data/resources' (C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\resources) for local templates does not exist. Will check every minute...
+2017-02-07 19:26:21,168 ERROR [web-mvc-1] storage - An error occurred: Basedir 'C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3' does not exist!
+sirius.kernel.health.HandledException: An error occurred: Basedir 'C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3' does not exist!
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at ninja.Storage.getBaseDir(Storage.java:47)
+	at ninja.Storage.getBucket(Storage.java:121)
+	at ninja.S3Controller.object(S3Controller.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-02-07 19:26:42,025 ERROR [web-mvc-2] storage - An error occurred: Basedir 'C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3' does not exist!
+sirius.kernel.health.HandledException: An error occurred: Basedir 'C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3' does not exist!
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at ninja.Storage.getBaseDir(Storage.java:47)
+	at ninja.Storage.getBucket(Storage.java:121)
+	at ninja.NinjaController.bucket(NinjaController.java:143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-02-07 19:26:42,027 ERROR [web-mvc-2] storage - An error occurred: Basedir 'C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3' does not exist!
+sirius.kernel.health.HandledException: An error occurred: Basedir 'C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3' does not exist!
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at ninja.Storage.getBaseDir(Storage.java:47)
+	at ninja.Storage.getBuckets(Storage.java:98)
+	at ninja.NinjaController.onError(NinjaController.java:54)
+	at sirius.web.controller.ControllerDispatcher.handleFailure(ControllerDispatcher.java:251)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:164)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-02-07 19:29:05,099 INFO  [Thread-4] sirius - Stopping Sirius
+2017-02-07 19:29:05,100 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:29:05,100 INFO  [Thread-4] sirius - Stopping lifecycles...
+2017-02-07 19:29:05,100 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:29:05,101 INFO  [default-9] sirius - Stopping: timer (System Timer Services)
+2017-02-07 19:29:05,102 INFO  [default-10] sirius - Stopping: Cluster
+2017-02-07 19:29:05,102 INFO  [default-18] sirius - Stopping: web (netty HTTP Server)
+2017-02-07 19:29:05,107 INFO  [default-17] sirius - Stopping: Rythm-Engine
+2017-02-07 19:29:05,863 INFO  [default-13] sirius - Stopping: crunchlog-writeback
+2017-02-07 19:29:05,863 INFO  [default-3] sirius - Stopping: tasks (Async Execution Engine)
+2017-02-07 19:29:05,864 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:29:05,865 INFO  [Thread-4] sirius - Awaiting system halt...
+2017-02-07 19:29:05,865 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:29:05,865 INFO  [Thread-4] sirius - Terminated: timer (System Timer Services) (Took: 15 us)
+2017-02-07 19:29:05,865 INFO  [Thread-4] sirius - Terminated: Cluster (Took: 4 us)
+2017-02-07 19:29:07,306 INFO  [Thread-4] sirius - Terminated: web (netty HTTP Server) (Took: 1 Second, 440 Milliseconds)
+2017-02-07 19:29:07,306 INFO  [Thread-4] sirius - Terminated: Rythm-Engine (Took: 4 us)
+2017-02-07 19:29:07,309 INFO  [Thread-4] sirius - Terminated: crunchlog-writeback (Took: 10 us)
+2017-02-07 19:29:07,462 INFO  [Thread-4] sirius - Terminated: tasks (Async Execution Engine) (Took: 153 Milliseconds)
+2017-02-07 19:29:07,462 INFO  [Thread-4] sirius - System halted! - Thread State
+2017-02-07 19:29:07,462 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:29:07,463 INFO  [Thread-4] sirius - STATE                   ID                                                  NAME
+2017-02-07 19:29:08,498 INFO  [Thread-4] sirius - RUNNABLE                28                                              Thread-4
+2017-02-07 19:29:08,499 INFO  [Thread-4] sirius - BLOCKED                 66                                        SIGINT handler
+2017-02-07 19:29:08,499 INFO  [Thread-4] sirius - BLOCKED                 65                                        SIGINT handler
+2017-02-07 19:29:08,499 INFO  [Thread-4] sirius - BLOCKED                 64                                        SIGINT handler
+2017-02-07 19:29:08,499 INFO  [Thread-4] sirius - WAITING                 63                                        SIGINT handler
+2017-02-07 19:29:08,500 INFO  [Thread-4] sirius - WAITING                 58                                       pool-9-thread-1
+2017-02-07 19:29:08,500 INFO  [Thread-4] sirius - RUNNABLE                55                                threadDeathWatcher-2-1
+2017-02-07 19:29:08,500 INFO  [Thread-4] sirius - RUNNABLE                 5                                       Attach Listener
+2017-02-07 19:29:08,500 INFO  [Thread-4] sirius - RUNNABLE                 4                                     Signal Dispatcher
+2017-02-07 19:29:08,500 INFO  [Thread-4] sirius - WAITING                  3                                             Finalizer
+2017-02-07 19:29:08,500 INFO  [Thread-4] sirius - WAITING                  2                                     Reference Handler
+2017-02-07 19:29:08,500 INFO  [Thread-4] sirius - RUNNABLE                 1                                                  main
+2017-02-07 19:29:08,501 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:29:43,964 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-02-07 19:29:43,968 INFO  [main] sirius - Windows 7 (6.1) on 4 CPUs (amd64)
+2017-02-07 19:29:43,968 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 19:29:43,968 INFO  [main] sirius - System is STARTING...
+2017-02-07 19:29:43,968 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 19:29:43,968 INFO  [main] sirius - Loading config...
+2017-02-07 19:29:43,968 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 19:29:44,086 INFO  [main] sirius - using application.conf from classpath...
+2017-02-07 19:29:44,239 INFO  [main] sirius - using instance.conf from filesystem...
+2017-02-07 19:29:44,252 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 19:29:44,254 INFO  [main] sirius - Starting the system...
+2017-02-07 19:29:44,254 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 19:29:44,482 INFO  [main] sirius - Initializing the log system:
+2017-02-07 19:29:44,485 INFO  [main] sirius - * Setting velocity to: WARN
+2017-02-07 19:29:44,486 INFO  [main] sirius - * Setting ignored to: OFF
+2017-02-07 19:29:44,487 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-02-07 19:29:44,488 INFO  [main] sirius - Active Customizations: []
+2017-02-07 19:29:44,615 INFO  [main] di - Initializing the MicroKernel....
+2017-02-07 19:29:44,616 INFO  [main] di - ~ Scanning .class files...
+2017-02-07 19:29:45,239 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-02-07 19:29:45,375 INFO  [main] di - ~ Initializing static parts-references...
+2017-02-07 19:29:45,469 INFO  [main] di - ~ Initializing parts...
+2017-02-07 19:29:45,667 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-02-07 19:29:45,672 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-02-07 19:29:45,673 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-02-07 19:29:46,232 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-02-07 19:29:46,233 INFO  [default-3] web - Initializing netty at port 9444
+2017-02-07 19:29:47,124 INFO  [default-4] sirius - Starting: Cluster
+2017-02-07 19:29:47,126 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-02-07 19:29:47,128 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 19:29:47,128 INFO  [main] sirius - System is UP and RUNNING - 3 Seconds, 309 Milliseconds
+2017-02-07 19:29:47,128 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-07 19:29:58,096 INFO  [default-7] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-02-07 19:31:21,701 INFO  [web-mvc-0] resources - Base directory: 'data/resources' (C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\resources) for local templates does not exist. Will check every minute...
+2017-02-07 19:33:03,438 INFO  [Thread-4] sirius - Stopping Sirius
+2017-02-07 19:33:03,438 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:33:03,438 INFO  [Thread-4] sirius - Stopping lifecycles...
+2017-02-07 19:33:03,438 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:33:03,438 INFO  [default-19] sirius - Stopping: timer (System Timer Services)
+2017-02-07 19:33:03,438 INFO  [default-0] sirius - Stopping: Cluster
+2017-02-07 19:33:03,438 INFO  [default-1] sirius - Stopping: web (netty HTTP Server)
+2017-02-07 19:33:03,453 INFO  [default-2] sirius - Stopping: Rythm-Engine
+2017-02-07 19:33:03,469 INFO  [default-3] sirius - Stopping: crunchlog-writeback
+2017-02-07 19:33:03,485 INFO  [default-4] sirius - Stopping: tasks (Async Execution Engine)
+2017-02-07 19:33:03,485 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:33:03,485 INFO  [Thread-4] sirius - Awaiting system halt...
+2017-02-07 19:33:03,485 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:33:03,485 INFO  [Thread-4] sirius - Terminated: timer (System Timer Services) (Took: 11 us)
+2017-02-07 19:33:03,485 INFO  [Thread-4] sirius - Terminated: Cluster (Took: 3 us)
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - Terminated: web (netty HTTP Server) (Took: 2 Seconds, 213 Milliseconds)
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - Terminated: Rythm-Engine (Took: 8 us)
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - Terminated: crunchlog-writeback (Took: 5 us)
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - Terminated: tasks (Async Execution Engine) (Took: 862 us)
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - System halted! - Thread State
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - STATE                   ID                                                  NAME
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - RUNNABLE                25                                              Thread-4
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - WAITING                 72                                        SIGINT handler
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - TIMED_WAITING           45                                threadDeathWatcher-2-1
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - RUNNABLE                 5                                       Attach Listener
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - RUNNABLE                 4                                     Signal Dispatcher
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - WAITING                  3                                             Finalizer
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - WAITING                  2                                     Reference Handler
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - RUNNABLE                 1                                                  main
+2017-02-07 19:33:05,700 INFO  [Thread-4] sirius - ---------------------------------------------------------

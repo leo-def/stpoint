@@ -1,0 +1,101 @@
+<div layout="column" flex layout-fill class="dark_text_box">
+    <div layout="row" layout-sm="column" layout-align="center center">
+          <md-progress-circular ng-disabled="!vm.loading" ng-if="vm.loading" md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <form 
+		layout="row" 
+		autocomplete="off" 
+		ng-submit="vm.register()">
+        <div flex="20"></div>
+            <md-card flex layout-fill>
+                <md-card-title>
+                  <md-card-title-text>
+                      <span class="md-headline">
+                          Cadastro
+                      </span>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <div layout="column" layout-fill layout-align="space-between center">
+                            <md-input-container flex> 
+                                <label>Nome completo</label>
+                                <input type="text"
+                                       aria-label="Nome completo" 
+                                       ng-model="vm.user.name"/>
+                            </md-input-container>
+                            <md-input-container flex> 
+                                <label>Email</label>
+                                <input type="email"
+                                       aria-label="Email" 
+                                       ng-model="vm.user.email"/>
+                            </md-input-container>
+                        
+                        	<div layout="row">
+	                            <input-select 
+	                            	model="vm.user.gender" 
+	                            	options="vm.genders" 
+	                            	label="Gênero"
+	                                init="true" >
+	                            </input-select>
+	                            
+	                            <input-string-date 
+	                                label="Nascimento"
+	                                model="vm.user.birth">
+	                            </input-string-date>
+                            </div>
+                            
+                            <div layout="row">
+                                
+                            	<input-select 
+                            		flex
+                            		model="vm.user.language" 
+                            		options="vm.languages" 
+                            		label="Qual lingua você fala?"
+                                   	init="true">
+                            	</input-select>
+                            	
+                            	<div flex></div>
+                                
+                            	<input-select 
+                            		flex
+                            		model="vm.user.desiredLanguage" 
+                            		options="vm.languages" 
+                            		label="Oque deseja falar?"
+                                   	init="true">
+                            	</input-select>
+                            </div>
+                            
+                            <md-input-container flex> <label>Senha</label>
+                                <input type="password"
+                                       aria-label="Senha"
+                                       ng-model="vm.user.password"/>
+                            </md-input-container> 
+                        
+                            <md-input-container flex> <label>Confirmar senha</label>
+                                <input type="password"
+                                       aria-label="Confirmar senha"
+                                       ng-model="vm.user.confirm_password"/>
+                            </md-input-container>
+                            
+                    </div>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center" layout-fill>
+                    <md-button 
+                        class="md-icon-button"  
+                        aria-label="registrar" 
+                        type="submit">
+                            <md-icon>done</md-icon>
+                            <md-tooltip md-direction="left">
+                                Registrar
+                            </md-tooltip>
+                    </md-button>
+                    
+                    <md-button ng-click="vm.toLogin()" aria-label="login" >
+                        Login
+                    </md-button>
+                    
+                </md-card-actions>
+            </md-card>
+        <div flex="20"></div>
+    </form>
+</div>

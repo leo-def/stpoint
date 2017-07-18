@@ -1,0 +1,133 @@
+<md-dialog aria-label="Formulário Usuário">
+<form 
+	md-dialog 
+	layout="column" 
+	layout-padding 
+	ng-init="row = vm.row"
+	ng-submit="vm.answer(row)">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <!-- existente  -->
+        <h2 ng-if="row.id">
+        	{{row.id}}# 
+        	<label>{{row.name}}</label>
+        </h2>
+        <!-- novo  -->
+        <h2 ng-if="!row.id">
+            Novo usuário
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.cancel(row)" aria-label="fechar">
+            <md-icon > close </md-icon>
+            <md-tooltip md-direction="left">
+                Fechar
+            </md-tooltip>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+		<div class="md-dialog-content" layout="column">
+
+ 			<input ng-model="row.id" type="hidden"></input>
+ 			
+            <md-input-container flex> <label>Nome completo</label>
+             	<input type="text" name="name" aria-label="Nome completo" ng-model="row.name"/>
+           	</md-input-container>
+                        
+           	<md-input-container flex> <label>Email</label>
+      			<input type="email" name="email" aria-label="Email" ng-model="row.email"/>
+         	 </md-input-container>
+                        
+      		<md-switch ng-model="row.enabled" aria-label="Ativo">
+			    {{ row.enabled ? "Ativo" : "Inativo" }}
+			</md-switch>
+                        
+         	<input-select 
+              	model="row.gender" 
+              	options="vm.genders" 
+           		label="Genêro"
+           		init="!row.id" >
+         	</input-select>
+                            
+        	<input-select 
+        		model="row.accountType" 
+        		options="vm.accountTypes" 
+        		label="Tipo de conta"
+        		init="!row.id" >
+            </input-select>
+                            
+            <input-string-date 
+            	label="Nascimento"
+            	model="row.birth">
+            </input-string-date>
+                            
+            <input-select 
+           		model="row.grantedAuthority.authority"
+              	options="vm.authorities" 
+             	label="Nivel de Acesso"
+             	init="!row.id" >
+           	</input-select>
+                            
+          	<div layout="row">
+                                
+	            <input-select 
+	            	flex
+	            	model="row.language" 
+	            	options="vm.languages" 
+	            	label="Qual lingua você fala?"
+	            	init="!row.id">
+	            </input-select>
+	            
+	            <div flex></div>
+	            
+	            <input-select 
+	            	flex
+	            	model="row.desiredLanguage" 
+	            	options="vm.languages" 
+	            	label="Oque deseja falar?"
+	            	init="!row.id" >
+	            </input-select>
+	            
+        	</div>
+        	<div layout="row" ng-if="!row.id">
+	        	 <md-input-container flex> <label>Senha</label>
+	             	<input type="password"
+	               		aria-label="Senha"
+	            		ng-model="row.password"/>
+	         	</md-input-container> 
+	                        
+	          	<md-input-container flex> <label>Confirmar senha</label>
+	               	<input type="password"
+	              		aria-label="Confirmar senha"
+	                 	ng-model="row.confirm_password"/>
+	    		</md-input-container>
+        	</div>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      
+      <span flex></span>
+      <md-button 
+                 class="md-icon-button"  
+                 aria-label="salvar" 
+                 type="submit">
+            <md-icon> done </md-icon>
+            <md-tooltip md-direction="left">
+                Salvar
+            </md-tooltip>
+      </md-button>
+      <md-button 
+                 class="md-icon-button"  
+                 aria-label="salvar" 
+                 ng-click="vm.cancel(row)">
+            <md-icon> cancel </md-icon>
+            <md-tooltip md-direction="left">
+                Cancelar
+            </md-tooltip>
+      </md-button>
+
+    </md-dialog-actions>
+</form>
+</md-dialog>

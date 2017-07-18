@@ -1,0 +1,64 @@
+2017-02-26 19:32:10,879 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-02-26 19:32:10,883 INFO  [main] sirius - Windows 10 (10.0) on 4 CPUs (amd64)
+2017-02-26 19:32:10,883 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-26 19:32:10,884 INFO  [main] sirius - System is STARTING...
+2017-02-26 19:32:10,884 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-26 19:32:10,884 INFO  [main] sirius - Loading config...
+2017-02-26 19:32:10,884 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-26 19:32:10,916 INFO  [main] sirius - using application.conf from classpath...
+2017-02-26 19:32:10,973 INFO  [main] sirius - using instance.conf from filesystem...
+2017-02-26 19:32:10,979 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-26 19:32:10,979 INFO  [main] sirius - Starting the system...
+2017-02-26 19:32:10,979 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-26 19:32:11,204 INFO  [main] sirius - Initializing the log system:
+2017-02-26 19:32:11,210 INFO  [main] sirius - * Setting velocity to: WARN
+2017-02-26 19:32:11,210 INFO  [main] sirius - * Setting ignored to: OFF
+2017-02-26 19:32:11,211 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-02-26 19:32:11,211 INFO  [main] sirius - Active Customizations: []
+2017-02-26 19:32:11,372 INFO  [main] di - Initializing the MicroKernel....
+2017-02-26 19:32:11,372 INFO  [main] di - ~ Scanning .class files...
+2017-02-26 19:32:12,452 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-02-26 19:32:12,652 INFO  [main] di - ~ Initializing static parts-references...
+2017-02-26 19:32:12,909 INFO  [main] di - ~ Initializing parts...
+2017-02-26 19:32:12,971 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-02-26 19:32:12,975 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-02-26 19:32:12,976 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-02-26 19:32:14,363 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-02-26 19:32:14,363 INFO  [default-3] web - Initializing netty at port 9444
+2017-02-26 19:32:15,016 INFO  [default-4] sirius - Starting: Cluster
+2017-02-26 19:32:15,018 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-02-26 19:32:15,020 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-26 19:32:15,021 INFO  [main] sirius - System is UP and RUNNING - 4 Seconds, 349 Milliseconds
+2017-02-26 19:32:15,021 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-26 19:32:25,896 INFO  [default-7] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-02-26 19:56:41,368 INFO  [Thread-4] sirius - Stopping Sirius
+2017-02-26 19:56:41,496 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-26 19:56:41,496 INFO  [Thread-4] sirius - Stopping lifecycles...
+2017-02-26 19:56:41,496 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-26 19:56:41,500 INFO  [default-4] sirius - Stopping: timer (System Timer Services)
+2017-02-26 19:56:41,501 INFO  [default-2] sirius - Stopping: Cluster
+2017-02-26 19:56:41,502 INFO  [default-7] sirius - Stopping: web (netty HTTP Server)
+2017-02-26 19:56:41,663 INFO  [default-9] sirius - Stopping: Rythm-Engine
+2017-02-26 19:56:42,391 INFO  [default-11] sirius - Stopping: crunchlog-writeback
+2017-02-26 19:56:42,392 INFO  [default-14] sirius - Stopping: tasks (Async Execution Engine)
+2017-02-26 19:56:42,403 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-26 19:56:42,404 INFO  [Thread-4] sirius - Awaiting system halt...
+2017-02-26 19:56:42,404 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-26 19:56:42,405 INFO  [Thread-4] sirius - Terminated: timer (System Timer Services) (Took: 54 us)
+2017-02-26 19:56:42,405 INFO  [Thread-4] sirius - Terminated: Cluster (Took: 5 us)
+2017-02-26 19:56:44,351 INFO  [Thread-4] sirius - Terminated: web (netty HTTP Server) (Took: 1 Second, 943 Milliseconds)
+2017-02-26 19:56:44,352 INFO  [Thread-4] sirius - Terminated: Rythm-Engine (Took: 12 us)
+2017-02-26 19:56:44,353 INFO  [Thread-4] sirius - Terminated: crunchlog-writeback (Took: 11 us)
+2017-02-26 19:56:44,566 INFO  [Thread-4] sirius - Terminated: tasks (Async Execution Engine) (Took: 213 Milliseconds)
+2017-02-26 19:56:44,566 INFO  [Thread-4] sirius - System halted! - Thread State
+2017-02-26 19:56:44,566 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-26 19:56:44,567 INFO  [Thread-4] sirius - STATE                   ID                                                  NAME
+2017-02-26 19:56:45,158 INFO  [Thread-4] sirius - BLOCKED                 60                                        SIGINT handler
+2017-02-26 19:56:45,158 INFO  [Thread-4] sirius - RUNNABLE                26                                              Thread-4
+2017-02-26 19:56:45,160 INFO  [Thread-4] sirius - WAITING                 51                                        SIGINT handler
+2017-02-26 19:56:45,161 INFO  [Thread-4] sirius - RUNNABLE                 5                                       Attach Listener
+2017-02-26 19:56:45,161 INFO  [Thread-4] sirius - RUNNABLE                 4                                     Signal Dispatcher
+2017-02-26 19:56:45,162 INFO  [Thread-4] sirius - WAITING                  3                                             Finalizer
+2017-02-26 19:56:45,163 INFO  [Thread-4] sirius - WAITING                  2                                     Reference Handler
+2017-02-26 19:56:45,163 INFO  [Thread-4] sirius - RUNNABLE                 1                                                  main
+2017-02-26 19:56:45,164 INFO  [Thread-4] sirius - ---------------------------------------------------------

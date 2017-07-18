@@ -1,0 +1,11 @@
+    <md-input-container>
+          <label>{{vm.label}}</label>
+          <md-select name="type" ng-model="vm.model" required>
+              <md-option
+                  	ng-repeat="option in vm.options"
+                  	ng-value="option.value"
+                  	aria-label="{{option.label? option.label : option.value }}" >
+                    {{option.label? option.label : option.value }}
+              </md-option>
+          </md-select>
+    </md-input-container>

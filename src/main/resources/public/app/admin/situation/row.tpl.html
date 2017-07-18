@@ -1,0 +1,75 @@
+<div layout="row">
+    <div flex="10"></div>
+
+    <md-card aria-label="Situação" flex>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline" ng-click="vm.editDialog($event, vm.situation)">
+                    {{vm.situation.id}}# {{vm.situation.title}} 
+                </span>
+                <span class="md-subhead">
+                    {{vm.situation.description}} - <b>{{vm.situation.accountType}}</b>
+                </span>
+            </md-card-title-text>
+            
+            <md-card-title-media
+                style="{{vm.upload.dropZoneStyle(vm.situation.imageURL)}}"
+                class="drop_zone md-media-md card-media"
+                ngf-drop="vm.uploadFile($event, vm.situation)"
+                ng-model="vm.situation.$$upload"
+                ngf-accept="'image/*'"
+                ngf-multiple="false"
+                aria-label="nova foto"
+                layout="row"
+                layout-align="center center"
+                layout-padding>
+  
+
+                    <!-- Upload -->	
+                    <md-button
+                        class=" md-icon-button logo"
+                        ngf-select="vm.uploadFile($event, vm.situation)"
+                        ng-model="vm.situation.$$upload"
+                        ngf-accept="'image/*'"
+                        ngf-multiple="false"
+                        aria-label="nova foto">
+                        <md-icon>add_a_photo</md-icon>
+                        <md-tooltip md-direction="left">
+                            Nova foto
+                        </md-tooltip>
+                    </md-button>
+
+            </md-card-title-media>
+
+        </md-card-title>
+        <md-card-content>
+            <value-manage host="{{vm.getValuesHost(vm.situation);}}">
+            </value-manage>
+
+        </md-card-content>
+
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button 
+                class="md-icon-button"  
+                aria-label="editar" 
+                ng-click="vm.edit($event, vm.situation)">
+                <md-icon> edit </md-icon>
+                <md-tooltip md-direction="left">
+                    Editar
+                </md-tooltip>
+            </md-button>
+            <md-button
+                class="md-icon-button"  
+                aria-label="remover" 
+                ng-click="vm.remove($event, vm.situation)">
+                <md-icon> delete </md-icon>
+                <md-tooltip md-direction="left">
+                    Deletar
+                </md-tooltip>
+            </md-button>
+            
+            
+        </md-card-actions>
+    </md-card>
+    <div flex="10"></div>
+</div>

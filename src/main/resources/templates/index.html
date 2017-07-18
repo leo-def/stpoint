@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html ng-app="app" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>STPoint - Inglês direto ao ponto</title>
+        <link rel="shortcut icon" th:href="@{/assets/favicon.ico}" type="image/x-icon"/>
+        <base th:href="${base}"/>
+
+        <!-- meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width"/>
+
+        <!-- css -->
+        <link th:href="@{/css/app.css}" rel="stylesheet" />
+        <link th:href="@{/css/custom-grid.css}" rel="stylesheet" />
+        <link th:href="@{/vendor/angular-material/angular-material.min.css}" rel="stylesheet" />
+        <link th:href="@{/vendor/material-design-icons/config.css}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"/>
+		
+		<!-- textAngular-1.5.16 -->
+        <link th:href="@{/vendor/textAngular-1.5.16/dist/textAngular.css}" rel="stylesheet" />
+
+    </head>
+    <body ng-controller="appController as vm" ng-cloak="" layout-fill="">
+
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button 
+                class="md-icon-button md-accent" 
+                aria-label="voltar" 
+                ng-click="vm.back.execute()"
+                ng-if="vm.back.exists()"
+                target="_blank">
+                <md-icon> back </md-icon>
+                <md-tooltip md-direction="left">
+                    Voltar
+                </md-tooltip>
+            </md-button>
+            <md-button 
+                class="md-icon-button md-accent" 
+                aria-label="menu" 
+                ng-click="vm.sidenav.toggle()"
+                ng-if="vm.sidenav.exists()"
+                target="_blank">
+                <md-icon> menu </md-icon>
+                <md-tooltip md-direction="right">
+                    Menu
+                </md-tooltip>
+            </md-button>
+            
+            <md-button 
+                aria-label="home"
+                class="md-accent"
+                ng-click="vm.toHome()"
+                target="_blank">
+                <h2>STPoint</h2>
+                    <md-tooltip md-direction="left">
+                    	Home
+                    </md-tooltip>
+            </md-button>
+            
+            <span flex=""></span>
+            
+            <md-button 
+                aria-label="Login"
+                class="md-accent"
+                ng-click="vm.toLogin()"
+                ng-if="!vm.isAuth()"
+                target="_blank">
+                Login
+                    <md-tooltip md-direction="left">
+                        Login
+                    </md-tooltip>
+            </md-button>
+            
+            <!--  admin area -->
+            <div ng-if="vm.isAdmin()">
+                <md-menu>
+                    <md-button 
+                        aria-label="Opções" 
+                        class="md-icon-button" 
+                        ng-click="$mdOpenMenu($event)">
+                        <md-icon> build </md-icon>
+                        <md-tooltip md-direction="left">
+                            Opções
+                        </md-tooltip>
+                    </md-button>
+                    <md-menu-content width="4" >
+                        <md-menu-item>
+                            <md-button 
+                                aria-label="Gerenciar Usuários" 
+                                ng-click="vm.toAdminUser()" >
+                                <md-icon> supervisor_account </md-icon>
+                                Usuários
+                            </md-button>
+
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>  
+                        <md-menu-item>
+
+                            <md-button 
+                                aria-label="Situações" 
+                                ng-click="vm.toAdminSituation()">
+                                <md-icon> web </md-icon>
+                                Situações 
+                            </md-button>
+
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+			</div><!-- / admin area -->
+			<!-- auth area -->
+			<div ng-if="vm.isAuth()">
+	         	<md-menu >
+	                <md-button aria-label="Opções do usuário" 
+	                           class="md-icon-button" 
+	                           ng-click="$mdOpenMenu($event)">
+	                    <md-icon md-menu-origin="">
+	                        supervisor_account
+	                    </md-icon>
+	                    <md-tooltip md-direction="left">
+				        	Minha conta
+				     	</md-tooltip>
+	                </md-button>
+	                <md-menu-content width="2">
+	                    <md-menu-item>
+	                        <md-button 
+	                            aria-label="Perfil"
+	                            class="md-accent"
+	                            ng-click="vm.toProfile($event)"
+	                            target="_blank">
+	                            Perfil
+	                            <md-tooltip md-direction="left">
+	                                Perfil
+	                            </md-tooltip>
+	                        </md-button>
+	                    </md-menu-item>
+	                    
+	                    <md-menu-item>
+	                        <md-button 
+	                            aria-label="Alterar Senha"
+	                            class="md-accent"
+	                            ng-click="vm.toChangePassword($event)"
+	                            target="_blank">
+	                            Alterar Senha
+	                            <md-tooltip md-direction="left">
+	                                Alterar Senha
+	                            </md-tooltip>
+	                        </md-button>
+	                    </md-menu-item>
+	                    
+	                    <md-menu-item>
+		                    <md-button 
+				                aria-label="Sair" 
+				                class="md-accent"
+				                ng-click="vm.logout()"
+				                ng-if="vm.isAuth()"
+				                target="_blank">
+				                Sair
+				                
+				            </md-button>
+			            </md-menu-item>
+			            
+	                </md-menu-content>
+	            </md-menu>
+	      	</div><!-- /auth area -->    
+            
+        </div>
+    </md-toolbar>
+
+    <section layout="row" ng-view="" layout-fill="" ></section>
+
+    <!--vendor-->   
+    <!-- jquery -->
+    <script th:src="@{/vendor/jquery/jquery-3.1.1.js}" type="text/javascript"></script>
+    
+    <!-- angular -->
+    <script th:src="@{/vendor/angular/angular.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/angular-animate.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/angular-aria.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/angular-cookies.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/angular-messages.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/angular-route.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/angular-sanitize.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/angular-base64.min.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/re-tree.min.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/ng-device-detector.min.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/angular/angular-mask.min.js}" type="text/javascript"></script>
+
+    <!-- moment -->
+    <script th:src="@{/vendor/moment/moment.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/moment/moment-with-locales.js}" type="text/javascript"></script>
+    
+    <!-- angular-material -->
+    <script th:src="@{/vendor/angular-material/angular-material.min.js}" type="text/javascript"></script>
+
+    <!-- ng-file-upload-->
+    <script th:src="@{/vendor/ng-file-upload-12.2.13/ng-file-upload-shim.js}" type="text/javascript"></script>
+    <script th:src="@{/vendor/ng-file-upload-12.2.13/ng-file-upload.js}" type="text/javascript"></script>
+
+	<!-- textAngular-1.5.16 -->
+	<script th:src="@{/vendor/textAngular-1.5.16/dist/textAngular-rangy.min.js}" type="text/javascript"></script>
+	<script th:src="@{/vendor/textAngular-1.5.16/dist/textAngular-sanitize.min.js}" type="text/javascript"></script>
+	<script th:src="@{/vendor/textAngular-1.5.16/dist/textAngular.min.js}" type="text/javascript"></script>
+
+    <!-- js -->
+    <!-- utils -->
+    <script th:src="@{/js/utils/utils.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/utils/auth-token.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/utils/data.factory.js}" type="text/javascript"></script>
+
+    <!-- app -->
+    <script th:src="@{/js/app/app.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/app.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/constants.factory.js}" type="text/javascript"></script>   
+    <script th:src="@{/js/app/app.controller.js}" type="text/javascript"></script> 
+    <script th:src="@{/js/app/redirect.controller.js}" type="text/javascript"></script>   
+    <script th:src="@{/js/app/grid-list-adapter.factory.js}" type="text/javascript"></script>
+
+    <!-- directive -->
+    <script th:src="@{/js/app/directive/input-string-date.directive.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/directive/input-select.directive.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/directive/audio-player.directive.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/directive/value-displayer.directive.js}" type="text/javascript"></script>
+
+    <!-- page -->
+    <script th:src="@{/js/app/page/page.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/page/page.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/page/page.controller.js}" type="text/javascript"></script>
+
+    <!-- auth -->
+    <script th:src="@{/js/app/auth/auth.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/auth/auth.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/auth/auth.controller.js}" type="text/javascript"></script>
+
+    <!-- expression -->
+    <script th:src="@{/js/app/expression/expression.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/expression/expression.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/expression/directive/list-expressions.directive.js}" type="text/javascript"></script>
+
+    <!-- user -->
+    <script th:src="@{/js/app/user/user.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/user/user.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/user/profile.controller.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/user/register.controller.js}" type="text/javascript"></script>
+	<script th:src="@{/js/app/user/change-password.controller.js}" type="text/javascript"></script>
+
+    <!-- situation -->
+    <script th:src="@{/js/app/situation/situation.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/situation/situation.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/situation/situation.controller.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/situation/show.controller.js}" type="text/javascript"></script>  
+    		
+    	<!-- directive -->
+		<script th:src="@{/js/app/situation/directive/situation-list.directive.js}" type="text/javascript"></script>
+		
+    <!-- reset-password -->
+    <script th:src="@{/js/app/reset-password/reset-password.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/reset-password/reset-password.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/reset-password/reset-password.controller.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/reset-password/reset-password-request.controller.js}" type="text/javascript"></script>
+
+    <!-- confirm-account -->
+    <script th:src="@{/js/app/confirm-account/confirm-account.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/confirm-account/confirm-account.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/confirm-account/confirm-account.controller.js}" type="text/javascript"></script>
+    
+    
+    <!-- admin -->
+    <script th:src="@{/js/app/admin/admin.module.js}" type="text/javascript"></script> 
+
+    <!-- admin situation -->
+    <script th:src="@{/js/app/admin/situation/situation.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/admin/situation/situation.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/admin/situation/situation.controller.js}" type="text/javascript"></script>
+
+		<!--  directive -->
+		<script th:src="@{/js/app/admin/situation/directive/situation-select.directive.js}" type="text/javascript"></script>
+		
+		
+    <!-- admin user -->
+    <script th:src="@{/js/app/admin/user/user.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/admin/user/user.factory.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/admin/user/user.controller.js}" type="text/javascript"></script>
+    
+    <!-- admin expression -->
+    <script th:src="@{/js/app/admin/expression/expression.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/admin/expression/expression.factory.js}" type="text/javascript"></script>
+
+        <!-- directive-->
+        <script th:src="@{/js/app/admin/expression/directive/expression-manage.directive.js}" type="text/javascript"></script> 
+
+    <!-- admin value -->
+    <script th:src="@{/js/app/admin/value/value.module.js}" type="text/javascript"></script>
+    <script th:src="@{/js/app/admin/value/value.factory.js}" type="text/javascript"></script>
+
+        <!-- directive-->
+        <script th:src="@{/js/app/admin/value/directive/value-manage.directive.js}" type="text/javascript"></script> 
+
+</body>
+</html>

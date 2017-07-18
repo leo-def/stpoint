@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.pp.stpoint</groupId>
+    <artifactId>com.pp.stpoint</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>${project.packaging}</packaging>
+    
+    
+    <name>com.pp.stpoint-master</name>
+    <description>STPoint Server and Web Application</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <start-class>com.pp.stpoint.Application</start-class>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+		<superuserName>${env.superuserName}</superuserName>
+		<superuserUsername>${env.superuserUsername}</superuserUsername>
+		<superuserPassword>${env.superuserPassword}</superuserPassword>
+    </properties>
+
+    <dependencies>
+        
+        <!-- Tests -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+                
+        <!-- Database -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        
+        <!-- Mail -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <!-- Devtools -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+            
+        <!-- Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        
+        <!-- Sessions -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+            
+        <!-- Redis Auth-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+        </dependency>
+
+        <!-- DTO Entity -->
+        <dependency>     
+            <groupId>org.modelmapper</groupId> 
+            <artifactId>modelmapper</artifactId>  
+            <version>0.7.4</version>
+        </dependency>
+        
+        <!-- Amazon AWS -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk</artifactId>
+            <version>1.9.11</version>
+        </dependency>
+        
+               
+        <!-- Thymeleaf -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- Jackson jsr310 (Java 8 Datatypes)-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.8.6</version>
+        </dependency>
+
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-configuration-processor</artifactId>
+        	<optional>true</optional>
+        </dependency>
+    </dependencies>
+        
+    <dependencyManagement>
+        <dependencies>
+            
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        
+        <plugins>
+                    
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <printSummary>true</printSummary>
+                </configuration>
+            </plugin>
+            
+        </plugins>
+    </build>
+    
+    <profiles>
+        <!-- development -->
+        <profile>
+            <id>development</id>
+            <properties>
+                <activatedProperties>development</activatedProperties>
+				<amazonAccessKey>${env.DEVamazonAccessKey}</amazonAccessKey>
+				<amazonSecretkey>${env.DEVamazonSecretkey}</amazonSecretkey>
+				<amazonEndpoint>${env.DEVamazonEndpoint}</amazonEndpoint>
+				<gmailUsername>${env.DEVgmailUsername}</gmailUsername>
+				<gmailPassword>${env.DEVgmailPassword}</gmailPassword>
+                <project.packaging>jar</project.packaging>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                
+                <!-- Main -->
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </dependency>
+                
+                <!-- hsqldb -->
+                <dependency>
+                    <groupId>org.hsqldb</groupId>
+                    <artifactId>hsqldb</artifactId>
+                    <scope>runtime</scope>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.apache.tomcat.embed</groupId>
+                    <artifactId>tomcat-embed-jasper</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+
+                <dependency>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>jstl</artifactId>
+                </dependency>
+                
+            </dependencies>
+        </profile>
+        <!-- production -->
+        <profile>
+            <id>production</id>
+            <properties>
+                <activatedProperties>production</activatedProperties>
+				<amazonAccessKey>${env.PRODamazonAccessKey}</amazonAccessKey>
+				<amazonSecretkey>${env.PRODamazonSecretkey}</amazonSecretkey>
+				<amazonEndpoint>${env.PRODamazonEndpoint}</amazonEndpoint>
+				<amazonHost>${env.PRODamazonHost}</amazonHost>
+                <project.packaging>war</project.packaging>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.wildfly.plugins</groupId>
+                        <artifactId>wildfly-maven-plugin</artifactId>
+                        <version>1.1.0.Beta1</version>
+                        <configuration>
+                            <hostname>${env.PRODwildflyHostname}</hostname>
+                            <port>${env.PRODwildflyPort}</port>
+                            <username>${env.PRODwildflyusername}</username>
+                            <password>${env.PRODwildflyPassword}</password>
+                            <name>stpoint.war</name>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                
+                <!-- Main without Tomcat -->
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                    <exclusions>
+                        <exclusion>
+                            <artifactId>spring-boot-starter-tomcat</artifactId>
+                            <groupId>org.springframework.boot</groupId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+                
+                <!-- MariaDB -->
+                <dependency>
+                    <groupId>org.mariadb.jdbc</groupId>
+                    <artifactId>mariadb-java-client</artifactId>
+                    <version>1.1.9</version>
+                </dependency>
+                
+                <!-- Javax Servlet -->
+                <dependency>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>javax.servlet-api</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+                
+                <!-- javax el -->
+                <dependency>
+                    <groupId>javax.el</groupId>
+                    <artifactId>javax.el-api</artifactId>
+                    <version>2.2.4</version>
+                </dependency>
+                
+            </dependencies>
+            
+        </profile>
+    </profiles>
+</project>

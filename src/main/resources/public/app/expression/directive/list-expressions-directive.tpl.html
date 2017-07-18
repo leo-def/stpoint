@@ -1,0 +1,40 @@
+<md-content ng-init="languageparam = 'pt-TW' ">
+	<md-list>
+	
+	        <md-list-item ng-repeat="row in vm.expressions" >
+	          <div class="md-list-item-text" 
+	              layout="column">
+	              
+	              <value-displayer values="row.values"></value-displayer>
+	              
+	          </div>
+	        </md-list-item>
+	        
+	</md-list>
+</md-content>
+
+
+<!--  
+                      <h3>
+                          <span ng-repeat="value in row.values track by $index">
+                              {{$index > 0 ? ' - ' : ' '}}
+                              {{value}}
+                              Translate:
+                              <translate-player 
+                                  text="value" 
+                                  language=" languageparam " 
+                                  id="{{ row.id+'v'+$index }}"></translate-player>
+                          </span>
+                      </h3>
+	              <p>
+                        <span ng-repeat="translate in row.translates track by $index">
+                            {{$index > 0 ? ' - ' : ' '}}
+                            {{translate}}
+                            Translate:
+                            <translate-player 
+                                text="translate" 
+                                language=" languageparam " 
+                                id="{{ row.id+'t'+$index }}" ></translate-player>
+                        </span>
+                      </p>
+                      -->

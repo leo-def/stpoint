@@ -1,0 +1,176 @@
+<div layout="column" layout-fills>
+<!--  first card -->
+<md-card aria-label="Situação">
+    	<md-card-title>
+	        <md-card-title-text layout="row">
+                    <!--  Filter -->
+                    <md-input-container>
+	                <label>Filtro</label>
+	                <input 
+	                    ng-model="vm.filter"
+	                    aria-label="Filtro">
+                    </md-input-container>
+	            
+	 	</md-card-title-text>
+ 	</md-card-title>
+ 	<md-card-content layout="column" ng-if="vm.isExtended($event, -1, vm.expression)" >
+            <md-input-container>
+            	<label>Titulo</label>
+         		<input 
+            		ng-model="vm.expression.title" 
+                	aria-label="titulo">
+            </md-input-container>
+                    
+            <md-input-container>
+                <label>Descrição</label>
+                    <textarea 
+                        ng-model="vm.expression.description"  
+                        md-maxlength="150" 
+                        rows="5" 
+                        md-select-on-focus
+                        aria-label="descrição">
+                    </textarea>
+            </md-input-container>
+    	</md-card-content>
+    	<md-card-actions>
+            <md-button 
+                     class="md-icon-button"  
+                     aria-label="criar"
+                     ng-if="vm.isExtended($event, -1, vm.expression)" 
+                     ng-click="vm.save($event, vm.expression)">
+                <md-icon> done </md-icon>
+                <md-tooltip md-direction="right">
+                    Criar
+                </md-tooltip>
+            </md-button>
+            <md-button 
+                       class="md-icon-button"  
+                       aria-label="salvar"
+                       ng-if="vm.isExtended($event, -1, vm.expression)" 
+                       ng-click="vm.cancel($event)">
+                  <md-icon> cancel </md-icon>
+                  <md-tooltip md-direction="right">
+                      Cancelar
+                  </md-tooltip>
+            </md-button>
+            <md-button
+                class="md-icon-button"  
+                aria-label="extender"
+                ng-if="!vm.isExtended($event, -1,  vm.expression)"
+                ng-click="vm.toggle($event, -1, vm.expression)">
+                <md-icon>fullscreen</md-icon>
+                <md-tooltip md-direction="right">
+                    Extender
+                </md-tooltip>
+            </md-button>
+            <md-button
+                class="md-icon-button"  
+                aria-label="recolher"
+                ng-if="vm.isExtended($event, -1, vm.expression)"
+                ng-click="vm.toggle($event, -1, vm.expression)">
+                <md-icon>fullscreen_exit</md-icon>
+                <md-tooltip md-direction="right">
+                    Recolher
+                </md-tooltip>
+            </md-button>
+    	</md-card-actions>
+</md-card>              
+ 
+<!--  List -->        
+ <md-card aria-label="Situação" ng-repeat="row in vm.expressions | filter : vm.filter">
+    <md-card-title>
+        <md-card-title-text layout="row">
+            
+            <h3>{{row.title}}</h3>
+            
+        </md-card-title-text>
+       
+        
+    </md-card-title>
+    <md-card-content layout="column"  ng-if="vm.isExtended($event, $index, row)">
+        
+	<p  ng-if="!vm.isForm($event, $index, row)">{{row.description}}</p>
+		
+        <div layout="column" ng-if="vm.isForm($event, $index, row)">        
+                <md-input-container>
+	                <label>Titulo</label>
+	                <input 
+	                    ng-model="row.title" 
+	                    aria-label="titulo">
+	            </md-input-container>
+                
+                <md-input-container>
+                            <label>Descrição</label>
+                            <textarea 
+                                ng-model="row.description"  
+                                md-maxlength="150" 
+                                rows="5" 
+                                md-select-on-focus
+                                aria-label="descrição"></textarea>
+                </md-input-container>
+        </div>        
+                
+		<value-manage host="{{vm.getValuesHost(row)}}">
+		</value-manage>
+		
+    </md-card-content>
+    <md-card-actions>
+        <md-icon 
+            ng-click="vm.save($event, row)" 
+            ng-if="vm.isForm($event, $index, row) && vm.isExtended($event, $index, row)"
+            aria-label="Salvar" 
+            class="md-secondary" >
+                save
+                <md-tooltip md-direction="right">
+			     	Salvar
+			 	</md-tooltip>
+        </md-icon>
+        <md-icon 
+            ng-click="vm.toggleForm($event, $index, row)" 
+            ng-if="vm.isForm($event, $index, row) && vm.isExtended($event, $index, row)"
+            aria-label="Salvar" 
+            class="md-secondary" >
+                cancel
+                <md-tooltip md-direction="right">
+                    Cancelar
+		</md-tooltip>
+        </md-icon>
+        <md-icon 
+            ng-click="vm.toggleForm($event, $index, row)" 
+            ng-if="!vm.isForm($event, $index, row) && vm.isExtended($event, $index, row)"
+            aria-label="Editar" 
+            class="md-secondary" >
+                edit
+                <md-tooltip md-direction="right">
+                    Editar
+		</md-tooltip>
+        </md-icon>
+      	<md-icon ng-click="vm.remove($event, row)" 
+        	aria-label="Remover"
+            class="md-secondary">
+            	remove
+            	<md-tooltip md-direction="right">
+		     		Remover
+		 		</md-tooltip>
+       	</md-icon>
+      	<md-icon
+       		aria-label="extender"
+           	ng-if="!vm.isExtended($event, $index, row)"
+           	ng-click="vm.toggle($event, $index, row)">
+            	fullscreen
+			   	<md-tooltip md-direction="right">
+			     	Extender
+			 	</md-tooltip>
+       	</md-icon>
+      	<md-icon  
+         	aria-label="recolher"
+          	ng-if="vm.isExtended($event, $index, row)"
+           	ng-click="vm.toggle($event, $index, row)">
+            	fullscreen_exit
+            	<md-tooltip md-direction="right">
+		    		Recolher
+		       	</md-tooltip>
+     	</md-icon>      
+    </md-card-actions>
+</md-card>        
+</div>

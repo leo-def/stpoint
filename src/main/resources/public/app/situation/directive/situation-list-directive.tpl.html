@@ -1,0 +1,41 @@
+	<div layout="column" class="gridListDynamicTiles">
+	
+	<md-input-container class="md-icon-float md-block">
+        <label>Filtro</label>
+            <input ng-model="vm.filter" aria-label="filtro">
+            <md-icon> search</md-icon>
+    </md-input-container>
+    
+  	<md-grid-list
+                md-cols="1"
+                md-cols-sm="2"
+                md-cols-md="3"
+                md-cols-gt-md="6"
+                md-row-height-gt-md="1:1" 
+                md-row-height="4:3"
+                md-gutter="8px" 
+                md-gutter-gt-sm="4px" >
+
+            <md-grid-tile ng-repeat="row in vm.situations | filter: vm.filter"
+                          md-rowspan="1"
+                          md-colspan="1"
+                          md-colspan-sm="1"
+                          md-colspan-xs="1"
+                          ng-click="vm.show(row)"
+                          ng-if="!vm.isParent(row)"
+                          ng-class="row.$$color" >
+              <md-grid-tile-header layout="row">
+              	<h2><value-displayer values="row.values" flex color="vm.color"></value-displayer></h2>
+              </md-grid-tile-header>
+              <img 
+                    ng-src="{{row.imageURL}}"
+                    class="logo-image" 
+                    alt="foto" />
+               <!-- 
+              <md-grid-tile-footer layout="row" >
+                 footer 
+              </md-grid-tile-footer>
+              -->
+            </md-grid-tile>
+          </md-grid-list>
+	</div>

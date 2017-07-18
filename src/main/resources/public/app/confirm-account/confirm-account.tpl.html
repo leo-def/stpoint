@@ -1,0 +1,33 @@
+<div layout="column" flex>
+    <div layout="row" layout-sm="column" layout-align="space-around">
+          <md-progress-circular ng-disabled="!vm.loading" ng-if="vm.loading" md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div layout="row">
+        <div flex="20"></div>
+            <md-content flex layout-padding >
+                <md-card>
+                    <md-card-title>
+                        <md-card-title-text>
+                            Confirmar ativação de conta
+                        </md-card-title-text>
+                    </md-card-title>
+
+                    <md-card-content>
+                    	Clique em ativar conta para concretizar 
+                    </md-card-content>
+
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button 
+                            aria-label="Enviar" 
+                            ng-click="vm.send($event)">
+                             Ativar conta
+                            <md-tooltip md-direction="left">
+                                Ativar conta
+                            </md-tooltip>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </md-content>
+        <div flex="20"></div>
+    </div>
+</div>

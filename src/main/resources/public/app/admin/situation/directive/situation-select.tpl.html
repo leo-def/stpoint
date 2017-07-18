@@ -1,0 +1,15 @@
+<md-autocomplete
+          md-selected-item="vm.model"
+          md-search-text-change="vm.searchTextChange(ctrl.searchText)"
+          md-selected-item-change="vm.selectedItemChange(item)"
+          md-search-text="vm.searchText"
+          md-items="item in vm.situations"
+          md-item-text="item.title"
+          placeholder="{{vm.label}}">
+        <md-item-template>
+          <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.title}}</span>
+        </md-item-template>
+        <md-not-found>
+          	Nenhum item encontrado
+        </md-not-found>
+      </md-autocomplete>

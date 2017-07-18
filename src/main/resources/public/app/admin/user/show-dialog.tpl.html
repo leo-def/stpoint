@@ -1,0 +1,78 @@
+<md-dialog aria-label="Visualizar {{row.name}}" ng-init="row = vm.row">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <!-- existente  -->
+        <h2  ng-click="vm.editDialog($event,row)">
+        	{{row.id}}# 
+        	<label>{{row.name}}</label>
+        </h2>
+        
+        <span flex></span>
+        
+        <md-button class="md-icon-button" ng-click="vm.cancel(row)" aria-label="fechar">
+            <md-icon > close </md-icon>
+            <md-tooltip md-direction="left">
+                Fechar
+            </md-tooltip>
+        </md-button>
+        
+      </div>
+    </md-toolbar>
+    
+    
+    <md-dialog-content>
+		<div class="md-dialog-content" layout="column">
+        <p>{{row.email}}</p>
+
+        <p>{{row.accountType}}</p>
+
+        <p>{{row.birth}}</p>
+        
+        <p ng-if="row.grantedAuthority !== null && row.grantedAuthority !== undefined">
+            {{row.grantedAuthority.authority}}
+        </p>
+	</md-dialog-content>
+
+
+    <md-dialog-actions layout="row">
+    	<md-button 
+            class="md-icon-button"  
+            aria-label="editar" 
+            ng-click="vm.editDialog($event, row)">
+                <md-icon> edit </md-icon>
+                <md-tooltip md-direction="left">
+                    Editar
+                </md-tooltip>
+        </md-button>
+    	<md-button 
+                 class="md-icon-button"  
+                 aria-label="fechar" 
+                 ng-click="vm.cancel(row)">
+            <md-icon> close </md-icon>
+            <md-tooltip md-direction="left">
+                Fechar
+            </md-tooltip>
+      	</md-button>
+      	
+      	<md-button 
+                 class="md-icon-button"  
+                 aria-label="Alterar Senha" 
+                 ng-click="vm.changePassword($event, row)" >
+            <md-icon> vpn_key </md-icon>
+            <md-tooltip md-direction="left">
+                Alterar Senha
+            </md-tooltip>
+      	</md-button>
+      	
+      	<md-button
+            class="md-icon-button"  
+            aria-label="remover" 
+            ng-click="vm.removeDialog($event,row)">
+                <md-icon> delete </md-icon>
+                <md-tooltip md-direction="left">
+                    Deletar
+                </md-tooltip>
+        </md-button>
+    
+    </md-dialog-actions>
+</md-dialog>

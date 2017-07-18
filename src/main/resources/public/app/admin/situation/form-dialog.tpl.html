@@ -1,0 +1,88 @@
+<md-dialog aria-label="Formulário Situação">
+<form 
+	md-dialog 
+	layout="column" 
+	layout-padding 
+	ng-init="row = vm.row"
+	ng-submit="vm.answer(row)">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <!-- existente  -->
+        <h2 ng-if="row.id">
+        	{{row.id}}# 
+        	<label>{{row.title}}</label>
+        </h2>
+        <!-- novo  -->
+        <h2 ng-if="!row.id">
+            Nova Situação
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.cancel(row)" aria-label="Fechar">
+            <md-icon > close </md-icon>
+            <md-tooltip md-direction="left">
+                Fechar
+            </md-tooltip>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content layout-fill>
+        <div class="md-dialog-content" layout="row" >
+                
+           
+           <div layout="column">      
+            <md-input-container>
+                <label>Titulo</label>
+                <input ng-model="row.title" 
+                       aria-label="titulo">
+            </md-input-container>
+        
+            <md-input-container>
+                <label>Descrição</label>
+                <textarea ng-model="row.description"  
+                          md-maxlength="150" 
+                          rows="5" 
+                          md-select-on-focus
+                          aria-label="descrição"></textarea>
+            </md-input-container>
+           
+            <input-select 
+                model="row.accountType" 
+                options="vm.accountTypes" 
+                label="Tipo de conta"
+                init="True"></input-select>
+        	</div>
+        	
+        	<situation-select
+        		model="row.parent"
+        		label="Situação Pai">
+        	</situation-select>
+        	  
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      
+      <span flex></span>
+      <md-button 
+                 class="md-icon-button"  
+                 aria-label="salvar" 
+                 type="submit">
+            <md-icon> done </md-icon>
+            <md-tooltip md-direction="left">
+                Salvar
+            </md-tooltip>
+      </md-button>
+      <md-button 
+                 class="md-icon-button"  
+                 aria-label="salvar" 
+                 ng-click="vm.cancel(row)">
+            <md-icon> cancel </md-icon>
+            <md-tooltip md-direction="left">
+                Cancelar
+            </md-tooltip>
+      </md-button>
+
+    </md-dialog-actions>
+</form>
+</md-dialog>

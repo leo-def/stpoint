@@ -1,0 +1,116 @@
+<div layout="column" flex>
+    <div layout="row" layout-sm="column" layout-align="space-around">
+          <md-progress-circular ng-disabled="!vm.loading" ng-if="vm.loading" md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <form layout="row"  autocomplete="off" ng-submit="vm.profile($event)">
+        <div flex="20"></div>
+
+        <!-- Editar Profile-->
+        <md-content flex layout-padding>
+            
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">
+                           
+                            Perfil
+
+                            - {{vm.user.name}}
+
+                        </span>
+                    </md-card-title-text>
+                    
+                    <!-- profileImageURL -->
+                    <md-card-title-media
+                        style="{{vm.upload.dropZoneStyle(vm.user.profileImageURL)}}"
+                        class="drop_zone md-media-md card-media"
+                        ngf-drop="vm.uploadFile($event, vm.user)"
+                        ng-model="vm.user.$$upload"
+                        ngf-accept="'image/*'"
+                        ngf-multiple="false"
+                        aria-label="nova foto"
+                        layout="row"
+                        layout-align="center center"
+                        layout-padding>
+
+                        <!-- Upload -->	
+                        <md-button
+                            class=" md-icon-button logo"
+                            ngf-select="vm.uploadFile($event, vm.user)"
+                            ng-model="vm.user.$$upload"
+                            ngf-accept="'image/*'"
+                            ngf-multiple="false"
+                            aria-label="nova foto">
+                            <md-icon>add_a_photo</md-icon>
+                            <md-tooltip md-direction="left">
+                                Nova foto
+                            </md-tooltip>
+                        </md-button>
+
+                    </md-card-title-media>
+                    
+                </md-card-title>
+              
+                <md-card-content>
+                    <div layout="column">
+                           
+                            <!-- name -->
+                            <md-input-container flex> <label>Nome completo</label>
+                                <input type="text"
+                                       aria-label="Nome completo"
+                                       ng-model="vm.user.name"/>
+                            </md-input-container>
+                            
+                            <!-- gender -->
+                            <input-select 
+                            	model="vm.user.gender" 
+                            	options="vm.genders" 
+                            	label="Gênero" 
+                                init="true" >
+                            </input-select>
+                            
+                            <!-- birth -->
+                            <input-string-date 
+                                label="Nascimento"
+                                model="vm.user.birth">
+                            </input-string-date>
+                            
+                            <div layout="row">
+                                
+                                <!-- language -->
+                            	<input-select 
+                            		flex
+                            		model="vm.user.language" 
+                            		options="vm.languages" 
+                            		label="Qual lingua você fala?"
+                                        init="true" >
+                            	</input-select>
+                            	
+                            	<div flex></div>
+                                
+                                <!-- desiredLanguage -->
+                            	<input-select 
+                            		flex
+                            		model="vm.user.desiredLanguage" 
+                            		options="vm.languages" 
+                            		label="Oque deseja falar?" 
+                                        init="true" >
+                            	</input-select>
+                            </div>
+                    </div>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    
+                    <md-button class="md-icon-button"  aria-label="Salvar" type="submit">
+                        <md-icon>done</md-icon>
+                        <md-tooltip md-direction="left">
+                                Salvar
+                        </md-tooltip>
+                    </md-button>
+                    
+                </md-card-actions>
+            </md-card>
+        </md-content>
+        <div flex="20"></div>
+    </form>
+</div>

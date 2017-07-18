@@ -1,0 +1,60 @@
+<div layout="column" flex>
+<md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        	<md-button 
+                class="md-icon-button md-accent" 
+                aria-label="voltar" 
+                ng-click="vm.back()"
+                target="_blank">
+	                <md-icon> apps </md-icon>
+	                <md-tooltip md-direction="right">
+	                    Voltar
+	         		</md-tooltip>
+         	</md-button>
+         	
+         	
+         	<md-button 
+                class="md-accent" 
+                aria-label="Situação Pai" 
+                ng-click="vm.showParent()"
+                ng-if="vm.situation.parent"
+                target="_blank">
+	               	{{vm.situation.parent.title}}
+	                <md-tooltip md-direction="right">
+		        		Selecionar 	{{vm.situation.parent.title}}
+		         	</md-tooltip>
+         	</md-button>
+         	<h4>{{vm.situation.title}}</h4>
+      </div>
+</md-toolbar>
+<md-tabs
+	            class="md-accent" 
+	            md-selected="vm.selected"
+	            layout-fill>
+	            
+	            <md-tab id="expressions">
+	              	<md-tab-label>Expressões</md-tab-label>
+	              	<md-tab-body layout-fill>
+	              		<md-content>
+		              		<list-expressions 
+		              			ng-if="vm.situation" 
+		              			situation="vm.situation">
+		              		</list-expressions>
+	              		</md-content>
+	              	</md-tab-body>
+	            </md-tab>
+	            
+	            <md-tab id="children" ng-if="!vm.situation.parent">
+	              	<md-tab-label>Situações</md-tab-label>
+	              	<md-tab-body layout-fill>
+	              		<md-content>
+		                	<situation-list 
+		                		ng-if="vm.situation" 
+		                		parentid="vm.situation.id">
+		                	</situation-list>
+	                	</md-content>
+	              	</md-tab-body>
+	            </md-tab>
+	            
+		</md-tabs>
+</div>

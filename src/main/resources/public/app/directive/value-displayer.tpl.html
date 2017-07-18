@@ -1,0 +1,17 @@
+	<span
+		class="value-displayer"
+		layout="row"
+		style="line-height:100%;"
+		aria-label="{{vm.desiredLanguageValue.value}}" 
+		ng-click="vm.showDetails($event);$event.stopPropagation();">
+		
+		{{vm.desiredLanguageValue.value}}
+		
+		<md-tooltip md-direction="left">
+			{{vm.languageValue.value}}
+		</md-tooltip>
+	
+	
+		<audio-player ng-if="vm.desiredLanguageValue" url="vm.desiredLanguageValue.audioURL" color="vm.color"></audio-player>
+	
+	</span>

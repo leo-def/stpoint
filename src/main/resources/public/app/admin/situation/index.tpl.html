@@ -1,0 +1,160 @@
+<md-sidenav 
+    class="md-sidenav-left md-whiteframe-4dp md-primary" 
+    md-component-id="left">
+
+    <md-toolbar class="md-theme-light" >
+        <h1 class="md-toolbar-tools">{{vm.user().name}}</h1>
+    </md-toolbar>
+    <md-content>
+        <md-list>
+            	<md-subheader>
+                	Situações
+                </md-subheader>
+				
+				<!-- toolbar -->
+				<md-list-item>
+                    <md-input-container flex class="md-icojn-float md-block">
+                        <label>Filtro</label>
+                        <input ng-model="vm.filter" aria-label="filtro">
+                        <md-icon> search </md-icon>
+                    </md-input-container>
+                </md-list-item>
+
+                <md-list-item ng-click="vm.create($event)" >
+                    <md-icon> 
+                        add 
+                    </md-icon>
+                    <md-tooltip md-direction="right">
+                    	Criar
+                	</md-tooltip>
+                </md-list-item>
+				
+				<!-- parent -->
+				<md-list-item 
+					ng-if="vm.situation && vm.situation.parent" 
+					class="md-primary"
+					ng-click="vm.selectById(vm.situation.parent.id)">
+				
+                    <h3>
+                    	{{vm.getSituation().parent.title}}
+                    </h3>
+
+                    <md-icon 
+                        ng-click="vm.edit($event, vm.getSituation().parent)" 
+                        aria-label="Editar" 
+                        class="md-secondary" >
+                        edit
+                        <md-tooltip md-direction="right">
+                    		Editar
+                		</md-tooltip>
+                    </md-icon>
+                    <md-icon 
+                        ng-click="vm.remove($event, vm.getSituation().parent)" 
+                        aria-label="Remover"
+                        class="md-secondary">
+                        remove
+                        <md-tooltip md-direction="right">
+                    		Remover
+                		</md-tooltip>
+                    </md-icon>
+                    
+                </md-list-item>
+				
+				<!-- situation -->
+				<md-list-item ng-if="vm.situation">
+                    
+                    <h4 ng-if="vm.situation.parent">
+                    	
+                    	{{vm.getSituation().title}}
+                    </h4>
+                    
+                    <h3 ng-if="!vm.situation.parent">
+                    	
+                    	{{vm.getSituation().title}}
+                    </h3>
+
+                    <md-icon 
+                        ng-click="vm.edit($event, vm.situation)" 
+                        aria-label="Editar" 
+                        class="md-secondary" >
+                        edit
+                        <md-tooltip md-direction="right">
+                    		Editar
+                		</md-tooltip>
+                    </md-icon>
+                    <md-icon 
+                        ng-click="vm.remove($event, vm.situation)" 
+                        aria-label="Remover"
+                        class="md-secondary">
+                        remove
+                        <md-tooltip md-direction="right">
+                    		Remover
+                		</md-tooltip>
+                    </md-icon>
+                </md-list-item>
+				
+                
+				<md-divider></md-divider>
+				
+				<!-- items -->
+                <md-list-item 
+                    ng-repeat="row in vm.situations| filter : vm.filter track by $index" 
+                    ng-click="vm.select($index)"
+                    ng-if="!vm.isSelected(row) && !vm.isParent(row)">
+
+                    <p><b ng-if="row.parent">{{row.parent.title}} # </b>{{row.title}}</p>
+
+                    <md-icon 
+                        ng-click="vm.edit($event, row)" 
+                        aria-label="Editar" 
+                        class="md-secondary" >
+                        edit
+                        <md-tooltip md-direction="right">
+                    		Editar
+                		</md-tooltip>
+                    </md-icon>
+                    <md-icon 
+                        ng-click="vm.remove($event, row)" 
+                        aria-label="Remover"
+                        class="md-secondary">
+                        remove
+                        <md-tooltip md-direction="right">
+                    		Remover
+                		</md-tooltip>
+                    </md-icon>
+                </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>
+<div flex layout="column" layout-fill>
+
+    
+    <!-- list values admin -->
+
+    <md-tabs
+        class="md-accent"
+        ng-if="vm.situation"
+        md-selected="vm.selected_tab"
+        layout-fill>
+        
+         <!-- Sobre -->
+        <md-tab id="about" layout-fill>
+            <md-tab-label>Sobre</md-tab-label>
+            <md-tab-body layout-fill>
+                <ng-include src=" 'app/admin/situation/row.tpl.html' "> </ng-include>
+            </md-tab-body>
+        </md-tab>
+        
+        <!-- Expression -->
+        <md-tab id="expression" layout-fill>
+            <md-tab-label>Expressões</md-tab-label>
+            <md-tab-body layout-fill>
+                <expression-manage
+                	layout-fill
+                    host="{{vm.getExpressionsHost(vm.situation)}}" 
+                    ng-if="vm.situation">
+                </expression-manage>
+            </md-tab-body>
+        </md-tab>
+    </md-tabs>
+</div>

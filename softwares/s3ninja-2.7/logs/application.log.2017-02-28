@@ -1,0 +1,585 @@
+2017-02-28 17:44:57,070 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-02-28 17:44:57,075 INFO  [main] sirius - Windows 10 (10.0) on 4 CPUs (amd64)
+2017-02-28 17:44:57,075 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 17:44:57,075 INFO  [main] sirius - System is STARTING...
+2017-02-28 17:44:57,075 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 17:44:57,075 INFO  [main] sirius - Loading config...
+2017-02-28 17:44:57,075 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 17:44:57,108 INFO  [main] sirius - using application.conf from classpath...
+2017-02-28 17:44:57,169 INFO  [main] sirius - using instance.conf from filesystem...
+2017-02-28 17:44:57,174 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 17:44:57,174 INFO  [main] sirius - Starting the system...
+2017-02-28 17:44:57,174 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 17:44:57,395 INFO  [main] sirius - Initializing the log system:
+2017-02-28 17:44:57,398 INFO  [main] sirius - * Setting velocity to: WARN
+2017-02-28 17:44:57,398 INFO  [main] sirius - * Setting ignored to: OFF
+2017-02-28 17:44:57,399 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-02-28 17:44:57,399 INFO  [main] sirius - Active Customizations: []
+2017-02-28 17:44:57,564 INFO  [main] di - Initializing the MicroKernel....
+2017-02-28 17:44:57,564 INFO  [main] di - ~ Scanning .class files...
+2017-02-28 17:44:58,603 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-02-28 17:44:58,909 INFO  [main] di - ~ Initializing static parts-references...
+2017-02-28 17:44:59,177 INFO  [main] di - ~ Initializing parts...
+2017-02-28 17:44:59,279 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-02-28 17:44:59,283 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-02-28 17:44:59,283 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-02-28 17:45:00,952 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-02-28 17:45:00,952 INFO  [default-3] web - Initializing netty at port 9444
+2017-02-28 17:45:01,923 INFO  [default-4] sirius - Starting: Cluster
+2017-02-28 17:45:01,928 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-02-28 17:45:01,932 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 17:45:01,932 INFO  [main] sirius - System is UP and RUNNING - 5 Seconds, 32 Milliseconds
+2017-02-28 17:45:01,933 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 17:45:11,949 INFO  [timer-0] crunchlog - Crunchlog writes to: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\crunchlog
+2017-02-28 17:45:11,950 WARN  [timer-0] crunchlog - Crunchlog was stopped as the base directory: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\crunchlog does not exist!
+2017-02-28 17:45:12,802 INFO  [default-7] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-02-28 17:59:42,471 INFO  [web-mvc-0] resources - Base directory: 'data/resources' (C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\resources) for local templates does not exist. Will check every minute...
+2017-02-28 18:00:11,709 ERROR [netty-2] web - An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at sirius.web.http.HttpPipeliningHandler.channelRead(HttpPipeliningHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:396)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at sirius.web.http.LowLevelHandler.channelRead(LowLevelHandler.java:67)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Writing to the buffer queue timed out
+	at sirius.web.http.InputStreamHandler.handle(InputStreamHandler.java:149)
+	at sirius.web.http.WebServerHandler.channelReadHttpContent(WebServerHandler.java:296)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:262)
+	... 41 more
+2017-02-28 18:00:21,841 ERROR [netty-3] web - An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at sirius.web.http.HttpPipeliningHandler.channelRead(HttpPipeliningHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:396)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at sirius.web.http.LowLevelHandler.channelRead(LowLevelHandler.java:67)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Writing to the buffer queue timed out
+	at sirius.web.http.InputStreamHandler.handle(InputStreamHandler.java:149)
+	at sirius.web.http.WebServerHandler.channelReadHttpContent(WebServerHandler.java:296)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:262)
+	... 41 more
+2017-02-28 18:00:24,127 ERROR [netty-4] web - An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at sirius.web.http.HttpPipeliningHandler.channelRead(HttpPipeliningHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:396)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at sirius.web.http.LowLevelHandler.channelRead(LowLevelHandler.java:67)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Writing to the buffer queue timed out
+	at sirius.web.http.InputStreamHandler.handle(InputStreamHandler.java:149)
+	at sirius.web.http.WebServerHandler.channelReadHttpContent(WebServerHandler.java:296)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:262)
+	... 41 more
+2017-02-28 18:00:28,921 ERROR [netty-5] web - An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at sirius.web.http.HttpPipeliningHandler.channelRead(HttpPipeliningHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:396)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at sirius.web.http.LowLevelHandler.channelRead(LowLevelHandler.java:67)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Writing to the buffer queue timed out
+	at sirius.web.http.InputStreamHandler.handle(InputStreamHandler.java:149)
+	at sirius.web.http.WebServerHandler.channelReadHttpContent(WebServerHandler.java:296)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:262)
+	... 41 more
+2017-02-28 18:00:37,765 ERROR [netty-6] web - An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at sirius.web.http.HttpPipeliningHandler.channelRead(HttpPipeliningHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:396)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at sirius.web.http.LowLevelHandler.channelRead(LowLevelHandler.java:67)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Writing to the buffer queue timed out
+	at sirius.web.http.InputStreamHandler.handle(InputStreamHandler.java:149)
+	at sirius.web.http.WebServerHandler.channelReadHttpContent(WebServerHandler.java:296)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:262)
+	... 41 more
+2017-02-28 18:00:41,804 ERROR [netty-7] web - An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at sirius.web.http.HttpPipeliningHandler.channelRead(HttpPipeliningHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:396)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at sirius.web.http.LowLevelHandler.channelRead(LowLevelHandler.java:67)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Writing to the buffer queue timed out
+	at sirius.web.http.InputStreamHandler.handle(InputStreamHandler.java:149)
+	at sirius.web.http.WebServerHandler.channelReadHttpContent(WebServerHandler.java:296)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:262)
+	... 41 more
+2017-02-28 18:00:47,026 ERROR [netty-8] web - An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at sirius.web.http.HttpPipeliningHandler.channelRead(HttpPipeliningHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:396)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at sirius.web.http.LowLevelHandler.channelRead(LowLevelHandler.java:67)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Writing to the buffer queue timed out
+	at sirius.web.http.InputStreamHandler.handle(InputStreamHandler.java:149)
+	at sirius.web.http.WebServerHandler.channelReadHttpContent(WebServerHandler.java:296)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:262)
+	... 41 more
+2017-02-28 18:00:49,125 INFO  [main] sirius - Stopping Sirius
+2017-02-28 18:00:49,126 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:00:49,126 INFO  [main] sirius - Stopping lifecycles...
+2017-02-28 18:00:49,126 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:00:49,127 INFO  [default-15] sirius - Stopping: timer (System Timer Services)
+2017-02-28 18:00:49,128 INFO  [default-18] sirius - Stopping: Cluster
+2017-02-28 18:00:49,128 INFO  [default-1] sirius - Stopping: web (netty HTTP Server)
+2017-02-28 18:00:51,894 ERROR [netty-1] web - An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: Writing to the buffer queue timed out (java.io.IOException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at sirius.web.http.HttpPipeliningHandler.channelRead(HttpPipeliningHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:396)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at sirius.web.http.LowLevelHandler.channelRead(LowLevelHandler.java:67)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:350)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:372)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:358)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:129)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Writing to the buffer queue timed out
+	at sirius.web.http.InputStreamHandler.handle(InputStreamHandler.java:149)
+	at sirius.web.http.WebServerHandler.channelReadHttpContent(WebServerHandler.java:296)
+	at sirius.web.http.WebServerHandler.channelRead(WebServerHandler.java:262)
+	... 41 more
+2017-02-28 18:00:51,928 INFO  [default-0] sirius - Stopping: Rythm-Engine
+2017-02-28 18:00:51,931 INFO  [default-0] org.rythmengine.RythmEngine - Shutting down Rythm Engine: [re-SZT]
+2017-02-28 18:00:51,931 INFO  [default-16] sirius - Stopping: crunchlog-writeback
+2017-02-28 18:00:51,931 INFO  [default-4] sirius - Stopping: tasks (Async Execution Engine)
+2017-02-28 18:00:51,933 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:00:51,933 INFO  [main] sirius - Awaiting system halt...
+2017-02-28 18:00:51,934 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:00:51,935 INFO  [main] sirius - Terminated: timer (System Timer Services) (Took: 18 us)
+2017-02-28 18:00:51,935 INFO  [main] sirius - Terminated: Cluster (Took: 7 us)
+2017-02-28 18:00:54,211 INFO  [main] sirius - Terminated: web (netty HTTP Server) (Took: 2 Seconds, 274 Milliseconds)
+2017-02-28 18:00:54,211 INFO  [main] sirius - Terminated: Rythm-Engine (Took: 13 us)
+2017-02-28 18:00:54,212 INFO  [main] sirius - Terminated: crunchlog-writeback (Took: 9 us)
+2017-02-28 18:00:54,282 INFO  [main] sirius - Terminated: tasks (Async Execution Engine) (Took: 70 Milliseconds)
+2017-02-28 18:00:54,283 INFO  [main] sirius - System halted! - Thread State
+2017-02-28 18:00:54,283 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:00:54,283 INFO  [main] sirius - STATE                   ID                                                  NAME
+2017-02-28 18:00:54,335 INFO  [main] sirius - TIMED_WAITING           52                                threadDeathWatcher-2-1
+2017-02-28 18:00:54,335 INFO  [main] sirius - RUNNABLE                 5                                       Attach Listener
+2017-02-28 18:00:54,335 INFO  [main] sirius - RUNNABLE                 4                                     Signal Dispatcher
+2017-02-28 18:00:54,336 INFO  [main] sirius - WAITING                  3                                             Finalizer
+2017-02-28 18:00:54,336 INFO  [main] sirius - WAITING                  2                                     Reference Handler
+2017-02-28 18:00:54,336 INFO  [main] sirius - RUNNABLE                 1                                                  main
+2017-02-28 18:00:54,336 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:01,802 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-02-28 18:01:01,805 INFO  [main] sirius - Windows 10 (10.0) on 4 CPUs (amd64)
+2017-02-28 18:01:01,805 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:01,805 INFO  [main] sirius - System is STARTING...
+2017-02-28 18:01:01,805 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:01,805 INFO  [main] sirius - Loading config...
+2017-02-28 18:01:01,805 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:01,834 INFO  [main] sirius - using application.conf from classpath...
+2017-02-28 18:01:01,891 INFO  [main] sirius - using instance.conf from filesystem...
+2017-02-28 18:01:01,895 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:01,895 INFO  [main] sirius - Starting the system...
+2017-02-28 18:01:01,895 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:02,053 INFO  [main] sirius - Initializing the log system:
+2017-02-28 18:01:02,056 INFO  [main] sirius - * Setting velocity to: WARN
+2017-02-28 18:01:02,056 INFO  [main] sirius - * Setting ignored to: OFF
+2017-02-28 18:01:02,057 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-02-28 18:01:02,057 INFO  [main] sirius - Active Customizations: []
+2017-02-28 18:01:02,144 INFO  [main] di - Initializing the MicroKernel....
+2017-02-28 18:01:02,144 INFO  [main] di - ~ Scanning .class files...
+2017-02-28 18:01:02,530 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-02-28 18:01:02,601 INFO  [main] di - ~ Initializing static parts-references...
+2017-02-28 18:01:02,655 INFO  [main] di - ~ Initializing parts...
+2017-02-28 18:01:02,696 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-02-28 18:01:02,699 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-02-28 18:01:02,700 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-02-28 18:01:03,202 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-02-28 18:01:03,202 INFO  [default-3] web - Initializing netty at port 9444
+2017-02-28 18:01:03,735 INFO  [default-4] sirius - Starting: Cluster
+2017-02-28 18:01:03,737 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-02-28 18:01:03,738 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:03,738 INFO  [main] sirius - System is UP and RUNNING - 2 Seconds, 9 Milliseconds
+2017-02-28 18:01:03,738 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:07,781 INFO  [main] sirius - Stopping Sirius
+2017-02-28 18:01:07,781 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:07,783 INFO  [main] sirius - Stopping lifecycles...
+2017-02-28 18:01:07,783 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:07,787 INFO  [default-6] sirius - Stopping: timer (System Timer Services)
+2017-02-28 18:01:07,789 INFO  [default-7] sirius - Stopping: Cluster
+2017-02-28 18:01:07,791 INFO  [default-8] sirius - Stopping: web (netty HTTP Server)
+2017-02-28 18:01:07,813 INFO  [default-9] sirius - Stopping: Rythm-Engine
+2017-02-28 18:01:07,818 INFO  [default-9] org.rythmengine.RythmEngine - Shutting down Rythm Engine: [re-YFh]
+2017-02-28 18:01:07,822 INFO  [default-10] sirius - Stopping: crunchlog-writeback
+2017-02-28 18:01:07,824 INFO  [default-11] sirius - Stopping: tasks (Async Execution Engine)
+2017-02-28 18:01:07,828 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:07,828 INFO  [main] sirius - Awaiting system halt...
+2017-02-28 18:01:07,828 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:07,831 INFO  [main] sirius - Terminated: timer (System Timer Services) (Took: 1 Millisecond)
+2017-02-28 18:01:07,831 INFO  [main] sirius - Terminated: Cluster (Took: 15 us)
+2017-02-28 18:01:10,020 INFO  [main] sirius - Terminated: web (netty HTTP Server) (Took: 2 Seconds, 187 Milliseconds)
+2017-02-28 18:01:10,021 INFO  [main] sirius - Terminated: Rythm-Engine (Took: 15 us)
+2017-02-28 18:01:10,021 INFO  [main] sirius - Terminated: crunchlog-writeback (Took: 12 us)
+2017-02-28 18:01:10,023 INFO  [main] sirius - Terminated: tasks (Async Execution Engine) (Took: 1 Millisecond)
+2017-02-28 18:01:10,023 INFO  [main] sirius - System halted! - Thread State
+2017-02-28 18:01:10,024 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:10,025 INFO  [main] sirius - STATE                   ID                                                  NAME
+2017-02-28 18:01:10,031 INFO  [main] sirius - TIMED_WAITING           13                      ForkJoinPool.commonPool-worker-3
+2017-02-28 18:01:10,032 INFO  [main] sirius - RUNNABLE                 5                                       Attach Listener
+2017-02-28 18:01:10,032 INFO  [main] sirius - RUNNABLE                 4                                     Signal Dispatcher
+2017-02-28 18:01:10,033 INFO  [main] sirius - WAITING                  3                                             Finalizer
+2017-02-28 18:01:10,033 INFO  [main] sirius - WAITING                  2                                     Reference Handler
+2017-02-28 18:01:10,034 INFO  [main] sirius - RUNNABLE                 1                                                  main
+2017-02-28 18:01:10,034 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:16,623 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-02-28 18:01:16,625 INFO  [main] sirius - Windows 10 (10.0) on 4 CPUs (amd64)
+2017-02-28 18:01:16,625 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:16,626 INFO  [main] sirius - System is STARTING...
+2017-02-28 18:01:16,626 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:16,626 INFO  [main] sirius - Loading config...
+2017-02-28 18:01:16,626 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:16,655 INFO  [main] sirius - using application.conf from classpath...
+2017-02-28 18:01:16,708 INFO  [main] sirius - using instance.conf from filesystem...
+2017-02-28 18:01:16,712 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:16,713 INFO  [main] sirius - Starting the system...
+2017-02-28 18:01:16,713 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:16,850 INFO  [main] sirius - Initializing the log system:
+2017-02-28 18:01:16,851 INFO  [main] sirius - * Setting velocity to: WARN
+2017-02-28 18:01:16,852 INFO  [main] sirius - * Setting ignored to: OFF
+2017-02-28 18:01:16,852 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-02-28 18:01:16,853 INFO  [main] sirius - Active Customizations: []
+2017-02-28 18:01:16,929 INFO  [main] di - Initializing the MicroKernel....
+2017-02-28 18:01:16,929 INFO  [main] di - ~ Scanning .class files...
+2017-02-28 18:01:17,293 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-02-28 18:01:17,362 INFO  [main] di - ~ Initializing static parts-references...
+2017-02-28 18:01:17,408 INFO  [main] di - ~ Initializing parts...
+2017-02-28 18:01:17,444 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-02-28 18:01:17,449 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-02-28 18:01:17,450 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-02-28 18:01:17,902 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-02-28 18:01:17,903 INFO  [default-3] web - Initializing netty at port 9444
+2017-02-28 18:01:18,423 INFO  [default-4] sirius - Starting: Cluster
+2017-02-28 18:01:18,425 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-02-28 18:01:18,426 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:18,426 INFO  [main] sirius - System is UP and RUNNING - 1 Second, 875 Milliseconds
+2017-02-28 18:01:18,426 INFO  [main] sirius - ---------------------------------------------------------
+2017-02-28 18:01:29,100 INFO  [default-6] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-02-28 18:03:08,709 INFO  [web-mvc-0] resources - Base directory: 'data/resources' (C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\resources) for local templates does not exist. Will check every minute...
+2017-02-28 22:38:00,268 INFO  [Thread-4] sirius - Stopping Sirius
+2017-02-28 22:38:00,268 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-28 22:38:00,268 INFO  [Thread-4] sirius - Stopping lifecycles...
+2017-02-28 22:38:00,268 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-28 22:38:00,268 INFO  [default-18] sirius - Stopping: timer (System Timer Services)
+2017-02-28 22:38:00,268 INFO  [default-13] sirius - Stopping: Cluster
+2017-02-28 22:38:00,268 INFO  [default-4] sirius - Stopping: web (netty HTTP Server)
+2017-02-28 22:38:00,330 INFO  [default-16] sirius - Stopping: Rythm-Engine
+2017-02-28 22:38:00,380 INFO  [default-6] sirius - Stopping: crunchlog-writeback
+2017-02-28 22:38:00,380 INFO  [default-10] sirius - Stopping: tasks (Async Execution Engine)
+2017-02-28 22:38:00,384 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-28 22:38:00,388 INFO  [Thread-4] sirius - Awaiting system halt...
+2017-02-28 22:38:00,388 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-02-28 22:38:00,389 INFO  [Thread-4] sirius - Terminated: timer (System Timer Services) (Took: 39 us)
+2017-02-28 22:38:00,389 INFO  [Thread-4] sirius - Terminated: Cluster (Took: 4 us)

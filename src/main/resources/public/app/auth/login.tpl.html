@@ -1,0 +1,56 @@
+<div layout="column"  flex layout-fill class="dark_text_box">
+    <div layout="row" layout-sm="column" layout-align="center center">
+          <md-progress-circular ng-disabled="!vm.loading" ng-if="vm.loading" md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <form
+    	layout="row"
+		novalidate
+		ng-submit="vm.login()">
+        <div flex="20"></div>
+           <!-- card -->
+           
+                <md-card flex layout-fill>
+                    <!--<img src="card-image.png" class="md-card-image" alt="image caption">-->
+                    <md-card-content>
+                        <h2>Login</h2>
+
+                            <!-- user -->
+                            <md-input-container class="md-block">
+                                <label>Email</label>
+                                <input required 
+                                       type="text"
+                                       ng-model="vm.user.username" 
+                                       aria-label="Email"/>
+                            </md-input-container>
+
+                            <!-- pass -->
+                            <md-input-container class="md-block">
+                                <label>Senha</label>
+                                <input required 
+                                       type="password"
+                                       ng-model="vm.user.password"
+                                       aria-label="password"/>
+                            </md-input-container>
+
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button 
+							class="md-icon-button"
+							type="submit">
+                            <md-icon>done</md-icon>
+                            <md-tooltip md-direction="left">
+                                Salvar
+                            </md-tooltip>
+                        </md-button>
+                        <md-button   ng-click="vm.toRegister()" aria-label="Não sou cadastrado">
+                            Não sou cadastrado
+                        </md-button>
+                        <md-button   ng-click="vm.toResetPassword()" aria-label="Não sou cadastrado">
+                            Esqueci minha senha
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+           
+        <div flex="20"></div>
+  </form>
+</div>

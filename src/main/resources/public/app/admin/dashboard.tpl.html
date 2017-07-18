@@ -1,0 +1,15 @@
+<md-tabs class="md-accent" md-selected="vm.selectedIndex" flex >
+      <md-tab id="situations" >
+        <md-tab-label>Situações</md-tab-label>
+        <md-tab-body ng-controller="adminSituationController as vm" >
+            <ng-include src=" 'app/admin/situation/index.tpl.html' "  layout="column"></ng-include>
+        </md-tab-body>
+      </md-tab>
+    
+       <md-tab id="users" >
+        <md-tab-label>Usuários</md-tab-label>
+        <md-tab-body ng-controller="adminUserController as vm">
+            <ng-include src=" 'app/admin/user/index.tpl.html' " layout="column"></ng-include>
+        </md-tab-body>
+      </md-tab>
+</md-tabs>

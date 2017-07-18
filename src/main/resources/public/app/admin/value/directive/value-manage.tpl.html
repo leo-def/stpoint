@@ -1,0 +1,76 @@
+<md-list>
+    <md-subheader class="md-no-sticky">Valores</md-subheader>
+    <md-list-item ng-click="vm.create($event)">
+        <md-icon aria-label="novo"> 
+            add 
+        </md-icon>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item
+    	ngf-drop="vm.upload($event, row)"
+      	ngf-accept="'audio/*'"
+      	ngf-multiple="false"
+      	ng-model="row.$$upload"
+        ng-repeat="row in vm.values track by $index"
+        class="drop_zone md-1-line">
+            <h4 ng-if="!vm.isExtended($event, $index, row)">
+                <b>( {{ row.language}} )</b>  {{ row.value}}
+            </h4>
+
+            <div ng-if="vm.isExtended($event, $index, row)" layout="row">
+
+                <input-select 
+                    model="row.language" 
+                    options="vm.languages" 
+                    label="Linguagem"
+                    init="true"> 
+                </input-select>
+
+                <md-input-container>
+                    <label>Valor</label>
+                    <input ng-model="row.value" aria-label="Valor">
+                </md-input-container>
+            </div>
+
+            <md-icon 
+                ngf-select="vm.upload($event, row)"
+                ngf-accept="'audio/*'"
+                ngf-multiple="false"
+                ng-model="row.$$upload"
+                aria-label="Upload" 
+                class="md-secondary">
+                file_upload
+            </md-icon>
+        
+            <md-icon ng-click="vm.toggle($event, $index, row)" 
+                     ng-if="!vm.isExtended($event, $index, row)"
+                     aria-label="Editar" 
+                     class="md-secondary">
+                edit
+            </md-icon>
+        
+            <md-icon ng-click="vm.toggle($event, $index, row)" 
+                     ng-if="vm.isExtended($event, $index, row)"
+                     aria-label="Cancelar" 
+                     class="md-secondary">
+                cancel
+            </md-icon>
+
+            <md-icon ng-click="vm.save($event, row)" 
+                     ng-if="vm.isExtended($event, $index, row)"
+                     aria-label="Salvar" 
+                     class="md-secondary">
+                save
+            </md-icon>
+
+            <md-icon ng-click="vm.remove($event, row)" 
+                     aria-label="Remover"
+                     class="md-secondary"
+                     ng-if="row.id">
+                remove
+            </md-icon>
+        <audio-player ng-if="row.audioURL" url="row.audioURL"></audio-player>
+
+    </md-list-item>
+</md-list>
+

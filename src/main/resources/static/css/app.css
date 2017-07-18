@@ -1,0 +1,40 @@
+* {
+    margin:0;
+    padding:0;
+    list-style:none;
+    vertical-align:baseline;
+}
+.main_content{
+    background-image: url("../assets/people.jpg");
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+.dark_text_box{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.md-button .logo {
+    height: 7rem;
+    width: 7rem;
+}
+.md-icon-button .logo{
+    height: 7rem;
+    width: 7rem;
+}
+.logo{
+    height: 7rem;
+    width: 7rem;
+}
+
+/*button image size*/
+.logo-image {
+    height: 100%;
+    width: 100%;
+}
+.drop_zone{
+    border: 2px dashed #757575;
+}
+
+
+

@@ -1,0 +1,450 @@
+2017-03-12 10:37:50,235 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-03-12 10:37:50,239 INFO  [main] sirius - Windows 10 (10.0) on 4 CPUs (amd64)
+2017-03-12 10:37:50,239 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 10:37:50,239 INFO  [main] sirius - System is STARTING...
+2017-03-12 10:37:50,239 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 10:37:50,239 INFO  [main] sirius - Loading config...
+2017-03-12 10:37:50,239 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 10:37:50,268 INFO  [main] sirius - using application.conf from classpath...
+2017-03-12 10:37:50,330 INFO  [main] sirius - using instance.conf from filesystem...
+2017-03-12 10:37:50,340 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 10:37:50,340 INFO  [main] sirius - Starting the system...
+2017-03-12 10:37:50,341 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 10:37:50,509 INFO  [main] sirius - Initializing the log system:
+2017-03-12 10:37:50,511 INFO  [main] sirius - * Setting velocity to: WARN
+2017-03-12 10:37:50,511 INFO  [main] sirius - * Setting ignored to: OFF
+2017-03-12 10:37:50,512 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-03-12 10:37:50,513 INFO  [main] sirius - Active Customizations: []
+2017-03-12 10:37:50,587 INFO  [main] di - Initializing the MicroKernel....
+2017-03-12 10:37:50,587 INFO  [main] di - ~ Scanning .class files...
+2017-03-12 10:37:51,192 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-03-12 10:37:51,307 INFO  [main] di - ~ Initializing static parts-references...
+2017-03-12 10:37:51,356 INFO  [main] di - ~ Initializing parts...
+2017-03-12 10:37:51,392 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-03-12 10:37:51,398 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-03-12 10:37:51,399 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-03-12 10:37:55,696 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-03-12 10:37:55,696 INFO  [default-3] web - Initializing netty at port 9444
+2017-03-12 10:37:56,180 INFO  [default-4] sirius - Starting: Cluster
+2017-03-12 10:37:56,182 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-03-12 10:37:56,184 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 10:37:56,184 INFO  [main] sirius - System is UP and RUNNING - 6 Seconds, 77 Milliseconds
+2017-03-12 10:37:56,184 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 10:38:07,063 INFO  [default-6] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-03-12 14:06:02,274 INFO  [Thread-4] sirius - Stopping Sirius
+2017-03-12 14:06:02,288 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-12 14:06:02,289 INFO  [Thread-4] sirius - Stopping lifecycles...
+2017-03-12 14:06:02,289 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-12 14:06:02,359 INFO  [default-5] sirius - Stopping: timer (System Timer Services)
+2017-03-12 14:06:02,363 INFO  [default-5] sirius - Stopping: Cluster
+2017-03-12 14:06:02,368 INFO  [default-16] sirius - Stopping: web (netty HTTP Server)
+2017-03-12 14:06:02,428 INFO  [default-8] sirius - Stopping: Rythm-Engine
+2017-03-12 14:06:02,474 INFO  [default-13] sirius - Stopping: crunchlog-writeback
+2017-03-12 14:06:02,474 INFO  [default-3] sirius - Stopping: tasks (Async Execution Engine)
+2017-03-12 14:06:02,477 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-12 14:06:02,477 INFO  [Thread-4] sirius - Awaiting system halt...
+2017-03-12 14:06:02,477 INFO  [Thread-4] sirius - ---------------------------------------------------------
+2017-03-12 14:06:02,479 INFO  [Thread-4] sirius - Terminated: timer (System Timer Services) (Took: 54 us)
+2017-03-12 14:06:02,479 INFO  [Thread-4] sirius - Terminated: Cluster (Took: 7 us)
+2017-03-12 21:51:45,530 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-03-12 21:51:45,762 INFO  [main] sirius - Windows 10 (10.0) on 4 CPUs (amd64)
+2017-03-12 21:51:45,762 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 21:51:45,762 INFO  [main] sirius - System is STARTING...
+2017-03-12 21:51:45,762 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 21:51:45,762 INFO  [main] sirius - Loading config...
+2017-03-12 21:51:45,762 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 21:51:46,012 INFO  [main] sirius - using application.conf from classpath...
+2017-03-12 21:51:46,367 INFO  [main] sirius - using instance.conf from filesystem...
+2017-03-12 21:51:46,387 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 21:51:46,387 INFO  [main] sirius - Starting the system...
+2017-03-12 21:51:46,387 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 21:51:47,921 INFO  [main] sirius - Initializing the log system:
+2017-03-12 21:51:47,948 INFO  [main] sirius - * Setting velocity to: WARN
+2017-03-12 21:51:47,950 INFO  [main] sirius - * Setting ignored to: OFF
+2017-03-12 21:51:47,956 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-03-12 21:51:47,957 INFO  [main] sirius - Active Customizations: []
+2017-03-12 21:51:48,621 INFO  [main] di - Initializing the MicroKernel....
+2017-03-12 21:51:48,621 INFO  [main] di - ~ Scanning .class files...
+2017-03-12 21:51:52,505 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-03-12 21:51:54,723 INFO  [main] di - ~ Initializing static parts-references...
+2017-03-12 21:51:55,810 INFO  [main] di - ~ Initializing parts...
+2017-03-12 21:51:56,182 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-03-12 21:51:56,207 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-03-12 21:51:56,209 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-03-12 21:52:00,483 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-03-12 21:52:00,483 INFO  [default-3] web - Initializing netty at port 9444
+2017-03-12 21:52:02,671 INFO  [default-4] sirius - Starting: Cluster
+2017-03-12 21:52:02,675 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-03-12 21:52:02,696 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 21:52:02,697 INFO  [main] sirius - System is UP and RUNNING - 19 Seconds, 239 Milliseconds
+2017-03-12 21:52:02,697 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-12 21:52:13,473 INFO  [default-6] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-03-12 23:33:47,540 ERROR [web-mvc-13] web - An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-03-21_Track_06.mp3?noAuth=true - File: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-03-21_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+sirius.kernel.health.HandledException: An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-03-21_Track_06.mp3?noAuth=true - File: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-03-21_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.web.http.Response.internalServerError(Response.java:827)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-03-12 23:33:47,557 ERROR [web-mvc-13] web - An unexpected exception occurred: handler (java.util.NoSuchElementException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: handler (java.util.NoSuchElementException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.Response.internalServerError(Response.java:828)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.NoSuchElementException: handler
+	at io.netty.channel.DefaultChannelPipeline.getContextOrDie(DefaultChannelPipeline.java:1080)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:251)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:240)
+	at sirius.web.http.Response.installChunkedWriteHandler(Response.java:790)
+	at sirius.web.http.Response.access$1400(Response.java:94)
+	at sirius.web.http.Response$SendFile.sendFileResponse(Response.java:720)
+	at sirius.web.http.Response$SendFile.send(Response.java:676)
+	... 13 more
+2017-03-12 23:33:51,157 ERROR [web-mvc-8] web - An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-05-15_Track_06.mp3?noAuth=true - File: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-05-15_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+sirius.kernel.health.HandledException: An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-05-15_Track_06.mp3?noAuth=true - File: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-05-15_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.web.http.Response.internalServerError(Response.java:827)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-03-12 23:33:51,162 ERROR [web-mvc-8] web - An unexpected exception occurred: handler (java.util.NoSuchElementException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: handler (java.util.NoSuchElementException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.Response.internalServerError(Response.java:828)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.NoSuchElementException: handler
+	at io.netty.channel.DefaultChannelPipeline.getContextOrDie(DefaultChannelPipeline.java:1080)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:251)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:240)
+	at sirius.web.http.Response.installChunkedWriteHandler(Response.java:790)
+	at sirius.web.http.Response.access$1400(Response.java:94)
+	at sirius.web.http.Response$SendFile.sendFileResponse(Response.java:720)
+	at sirius.web.http.Response$SendFile.send(Response.java:676)
+	... 13 more
+2017-03-12 23:33:51,162 ERROR [web-mvc-5] web - An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-05-15_Track_06.mp3?noAuth=true - File: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-05-15_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+sirius.kernel.health.HandledException: An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-05-15_Track_06.mp3?noAuth=true - File: C:\Users\Leonardo\Documents\workspace-sts\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-05-15_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.web.http.Response.internalServerError(Response.java:827)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-03-12 23:33:51,168 ERROR [web-mvc-5] web - An unexpected exception occurred: handler (java.util.NoSuchElementException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: handler (java.util.NoSuchElementException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.Response.internalServerError(Response.java:828)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.NoSuchElementException: handler
+	at io.netty.channel.DefaultChannelPipeline.getContextOrDie(DefaultChannelPipeline.java:1080)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:251)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:240)
+	at sirius.web.http.Response.installChunkedWriteHandler(Response.java:790)
+	at sirius.web.http.Response.access$1400(Response.java:94)
+	at sirius.web.http.Response$SendFile.sendFileResponse(Response.java:720)
+	at sirius.web.http.Response$SendFile.send(Response.java:676)
+	... 13 more
+2017-03-13 09:18:40,329 INFO  [main] sirius - Java HotSpot(TM) 64-Bit Server VM (1.8, Oracle Corporation, 25.111-b14)
+2017-03-13 09:18:40,360 INFO  [main] sirius - Windows 7 (6.1) on 4 CPUs (amd64)
+2017-03-13 09:18:40,360 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-13 09:18:40,360 INFO  [main] sirius - System is STARTING...
+2017-03-13 09:18:40,360 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-13 09:18:40,360 INFO  [main] sirius - Loading config...
+2017-03-13 09:18:40,360 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-13 09:18:40,438 INFO  [main] sirius - using application.conf from classpath...
+2017-03-13 09:18:40,563 INFO  [main] sirius - using instance.conf from filesystem...
+2017-03-13 09:18:40,579 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-13 09:18:40,579 INFO  [main] sirius - Starting the system...
+2017-03-13 09:18:40,579 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-13 09:18:40,922 INFO  [main] sirius - Initializing the log system:
+2017-03-13 09:18:40,922 INFO  [main] sirius - * Setting velocity to: WARN
+2017-03-13 09:18:40,922 INFO  [main] sirius - * Setting ignored to: OFF
+2017-03-13 09:18:40,938 INFO  [main] sirius - Enabled 3 of 3 frameworks...
+2017-03-13 09:18:40,938 INFO  [main] sirius - Active Customizations: []
+2017-03-13 09:18:41,140 INFO  [main] di - Initializing the MicroKernel....
+2017-03-13 09:18:41,140 INFO  [main] di - ~ Scanning .class files...
+2017-03-13 09:18:42,591 INFO  [main] di - ~ Applying 1 class load actions on 379 classes...
+2017-03-13 09:18:42,997 INFO  [main] di - ~ Initializing static parts-references...
+2017-03-13 09:18:43,262 INFO  [main] di - ~ Initializing parts...
+2017-03-13 09:18:43,387 INFO  [default-0] sirius - Starting: tasks (Async Execution Engine)
+2017-03-13 09:18:43,402 INFO  [default-1] sirius - Starting: crunchlog-writeback
+2017-03-13 09:18:43,402 INFO  [default-2] sirius - Starting: Rythm-Engine
+2017-03-13 09:18:44,775 INFO  [default-3] sirius - Starting: web (netty HTTP Server)
+2017-03-13 09:18:44,775 INFO  [default-3] web - Initializing netty at port 9444
+2017-03-13 09:18:45,855 INFO  [default-4] sirius - Starting: Cluster
+2017-03-13 09:18:45,855 INFO  [default-5] sirius - Starting: timer (System Timer Services)
+2017-03-13 09:18:45,870 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-13 09:18:45,870 INFO  [main] sirius - System is UP and RUNNING - 6 Seconds, 50 Milliseconds
+2017-03-13 09:18:45,870 INFO  [main] sirius - ---------------------------------------------------------
+2017-03-13 09:18:57,492 INFO  [default-7] sigar - The maximal number of open files on this system is good (-1, Required are at least: 65536)
+2017-03-13 09:29:43,816 ERROR [web-mvc-2] web - An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-03-57_Track_07.mp3?noAuth=true - File: C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-03-57_Track_07.mp3 (No detail message available) [Debug-Message: UnknownError]
+sirius.kernel.health.HandledException: An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-03-57_Track_07.mp3?noAuth=true - File: C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-03-57_Track_07.mp3 (No detail message available) [Debug-Message: UnknownError]
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.web.http.Response.internalServerError(Response.java:827)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-03-13 09:29:43,986 ERROR [web-mvc-14] web - An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-05-15_Track_06.mp3?noAuth=true - File: C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-05-15_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+sirius.kernel.health.HandledException: An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-05-15_Track_06.mp3?noAuth=true - File: C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-05-15_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.web.http.Response.internalServerError(Response.java:827)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-03-13 09:29:43,981 ERROR [web-mvc-8] web - An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-05-15_Track_06.mp3?noAuth=true - File: C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-05-15_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+sirius.kernel.health.HandledException: An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-05-15_Track_06.mp3?noAuth=true - File: C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-05-15_Track_06.mp3 (No detail message available) [Debug-Message: UnknownError]
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.web.http.Response.internalServerError(Response.java:827)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-03-13 09:29:43,817 ERROR [web-mvc-3] web - An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-03-57_Track_07.mp3?noAuth=true - File: C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-03-57_Track_07.mp3 (No detail message available) [Debug-Message: UnknownError]
+sirius.kernel.health.HandledException: An error occurred: An excption occurred while responding to: /s3/stpoint_app/audio_2017-03-01-10-03-57_Track_07.mp3?noAuth=true - File: C:\Users\80515304\Documents\workspace-sts-3.8.2\stpoint\softwares\s3ninja-2.7\data\s3\stpoint_app\audio_2017-03-01-10-03-57_Track_07.mp3 (No detail message available) [Debug-Message: UnknownError]
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.web.http.Response.internalServerError(Response.java:827)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-03-13 09:29:43,989 ERROR [web-mvc-3] web - An unexpected exception occurred: handler (java.util.NoSuchElementException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: handler (java.util.NoSuchElementException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.Response.internalServerError(Response.java:828)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.NoSuchElementException: handler
+	at io.netty.channel.DefaultChannelPipeline.getContextOrDie(DefaultChannelPipeline.java:1080)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:251)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:240)
+	at sirius.web.http.Response.installChunkedWriteHandler(Response.java:790)
+	at sirius.web.http.Response.access$1400(Response.java:94)
+	at sirius.web.http.Response$SendFile.sendFileResponse(Response.java:720)
+	at sirius.web.http.Response$SendFile.send(Response.java:676)
+	... 13 more
+2017-03-13 09:29:43,989 ERROR [web-mvc-8] web - An unexpected exception occurred: handler (java.util.NoSuchElementException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: handler (java.util.NoSuchElementException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.Response.internalServerError(Response.java:828)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.NoSuchElementException: handler
+	at io.netty.channel.DefaultChannelPipeline.getContextOrDie(DefaultChannelPipeline.java:1080)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:251)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:240)
+	at sirius.web.http.Response.installChunkedWriteHandler(Response.java:790)
+	at sirius.web.http.Response.access$1400(Response.java:94)
+	at sirius.web.http.Response$SendFile.sendFileResponse(Response.java:720)
+	at sirius.web.http.Response$SendFile.send(Response.java:676)
+	... 13 more
+2017-03-13 09:29:43,988 ERROR [web-mvc-2] web - An unexpected exception occurred: handler (java.util.NoSuchElementException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: handler (java.util.NoSuchElementException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.Response.internalServerError(Response.java:828)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.NoSuchElementException: handler
+	at io.netty.channel.DefaultChannelPipeline.getContextOrDie(DefaultChannelPipeline.java:1080)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:251)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:240)
+	at sirius.web.http.Response.installChunkedWriteHandler(Response.java:790)
+	at sirius.web.http.Response.access$1400(Response.java:94)
+	at sirius.web.http.Response$SendFile.sendFileResponse(Response.java:720)
+	at sirius.web.http.Response$SendFile.send(Response.java:676)
+	... 13 more
+2017-03-13 09:29:43,988 ERROR [web-mvc-14] web - An unexpected exception occurred: handler (java.util.NoSuchElementException)
+sirius.kernel.health.HandledException: An unexpected exception occurred: handler (java.util.NoSuchElementException)
+	at sirius.kernel.health.Exceptions$ErrorHandler.handle(Exceptions.java:190)
+	at sirius.kernel.health.Exceptions.handle(Exceptions.java:348)
+	at sirius.web.http.Response.internalServerError(Response.java:828)
+	at sirius.web.http.Response.access$800(Response.java:94)
+	at sirius.web.http.Response$SendFile.send(Response.java:678)
+	at sirius.web.http.Response.file(Response.java:805)
+	at ninja.S3Controller.getObject(S3Controller.java:539)
+	at ninja.S3Controller.object(S3Controller.java:276)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sirius.web.controller.ControllerDispatcher.executeRoute(ControllerDispatcher.java:181)
+	at sirius.web.controller.ControllerDispatcher.performRouteInOwnThread(ControllerDispatcher.java:161)
+	at sirius.web.controller.ControllerDispatcher.lambda$tryExecuteRoute$10(ControllerDispatcher.java:124)
+	at sirius.kernel.async.ExecutionBuilder$TaskWrapper.run(ExecutionBuilder.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.NoSuchElementException: handler
+	at io.netty.channel.DefaultChannelPipeline.getContextOrDie(DefaultChannelPipeline.java:1080)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:251)
+	at io.netty.channel.DefaultChannelPipeline.addBefore(DefaultChannelPipeline.java:240)
+	at sirius.web.http.Response.installChunkedWriteHandler(Response.java:790)
+	at sirius.web.http.Response.access$1400(Response.java:94)
+	at sirius.web.http.Response$SendFile.sendFileResponse(Response.java:720)
+	at sirius.web.http.Response$SendFile.send(Response.java:676)
+	... 13 more
